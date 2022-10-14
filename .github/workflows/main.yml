@@ -32,11 +32,23 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Move 404 to root
-        run: mv ./out/404/index.html ./out/404.html
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: out
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET_NAME }}
+  
+  # CloudFrontのキャッシュクリア
+      - name: Clear cache in CloudFront
+        uses: chetan/invalidate-cloudfront-action@v1.3
+        env:
+          DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
+          PATHS: "/*"
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

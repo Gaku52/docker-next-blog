@@ -1,10 +1,10 @@
 {
-  "name": "blog",
+  "name": "next-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "cross-env next dev",
-    "build": "cross-env next build && next export",
+    "build": "next build && next export",
     "start": "cross-env next start",
     "lint": "cross-env next lint",
     "lint:fix": "cross-env next lint --fix",

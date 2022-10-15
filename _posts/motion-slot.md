@@ -15,7 +15,17 @@ https://stitches.dev/
 
 ## 概要
 
-以下、現在制作中のためサンプル記事
+このブログはNext.jsテンプレートとして頂いたものです。今後、オリジナリティのあるポートフォリオサイト（ブログ）を作成しながらも、学習のアウトプットを行うために使用していきます。
+
+主に現在、学びたい項目は以下になります。
+
+言語・フレームワーク...HTML/CSS/JavaScript/Typescript/React/Next.js
+
+CSSフレームワーク...Tailwindcss/Bootstrap
+
+Deployの学習...AWS/Vercel/GithubPages
+
+ほか...Git/Docker/DB
 
 ### React Slot
 

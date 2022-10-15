@@ -1,38 +1,42 @@
 name: Deploy to GitHub Pages
 
-# main ブランチ の push 時にこのワークフローを実行する
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-    # main ブランチを取得する
-    - name: Checkout
-      uses: actions/checkout@v3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    # Node.js のセットアップをする
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-        cache: yarn
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: npm
 
-    # パッケージをインストールする
-    - name: Install dependencies
-      run: yarn --frozen-lockfile
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
-    # ビルドする
-    - name: Build
-      run: yarn build
+      - name: Install dependencies
+        run: npm install
 
-    # GitHub Pages にデプロイする
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.TOKEN }}
-        publish_dir: out
+      - name: Build
+        run: npm run build
+
+      - name: Move 404 to root
+        run: mv ./out/404/index.html ./out/404.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          publish_dir: out

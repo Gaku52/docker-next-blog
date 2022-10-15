@@ -15,7 +15,7 @@ https://stitches.dev/
 
 ## 概要
 
-Framer Motion を React Slot で運用すると、アニメーションの再利用性が飛躍的に向上します。
+以下、現在制作中のためサンプル記事
 
 ### React Slot
 

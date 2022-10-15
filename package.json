@@ -1,15 +1,15 @@
 {
-  "name": "blog",
+  "name": "next-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env next dev",
-    "build": "cross-env next build && next export",
-    "start": "cross-env next start",
-    "lint": "cross-env next lint",
-    "lint:fix": "cross-env next lint --fix",
-    "format": "cross-env prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
-    "prepare": "cross-env husky install"
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",

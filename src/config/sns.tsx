@@ -7,12 +7,12 @@ export const sns = [
     label: 'Zenn',
   },
   {
-    href: 'https://github.com',
+    href: 'https://github.com/Gaku52',
     icon: <SiGithub size={20} />,
     label: 'Github',
   },
   {
-    href: 'https://twitter.com',
+    href: 'https://twitter.com/Gk_Egr32',
     icon: <SiTwitter size={20} />,
     label: 'Twitter',
   },

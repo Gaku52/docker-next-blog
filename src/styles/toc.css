@@ -15,5 +15,5 @@
 }
 
 .is-active-link {
-  @apply text-neutral-900 dark:text-teal-400;
+  @apply text-neutral-900 dark:text-teal-200;
 }

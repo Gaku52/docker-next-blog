@@ -14,11 +14,9 @@ export const Profile = () => (
     </div>
 
     <p className="text-primary-1">
-      1996年生まれの26歳
-      <br />
-      2022年4月からプログラミング学習開始しました。
-      <br />
-      現在JavaScript/TypeScript/React/Next.js/Gitなどの学習をしております。
+      1996年生まれの26歳<br />
+      2022年4月からプログラミング学習開始<br /><br />
+      HTML/CSS/JavaScript/TypeScript/React/Next.js/Gitなどの学習をしております。
     </p>
 
     <div className="flex gap-4">

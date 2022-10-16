@@ -2,13 +2,14 @@
 title: 'Next.jsブログテンプレートを利用して始める学習'
 excerpt: 'Nextブログテンプレートを利用することにより、Reactコンポーネントの理解やES6についての理解を深める。'
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
-date: '2022-07-01'
+date: '2022-10-16'
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
 tags:
   - 'React'
   - 'RadixUI'
   - 'FramerMotion'
+  - '学習'
 ---
 
 https://stitches.dev/
@@ -19,13 +20,10 @@ https://stitches.dev/
 
 主に現在、学びたい項目は以下になります。
 
-言語・フレームワーク...HTML/CSS/JavaScript/Typescript/React/Next.js
-
-CSSフレームワーク...Tailwindcss/Bootstrap
-
-Deployの学習...AWS/Vercel/GithubPages
-
-ほか...Git/Docker/DB
+言語・フレームワーク...HTML/CSS/JavaScript/Typescript/React/Next.js  
+CSSフレームワーク...Tailwindcss/Bootstrap  
+Deployの学習...AWS/Vercel/GithubPages  
+ほか...Git/Docker/DB  
 
 ### React Slot
 
@@ -183,3 +181,9 @@ ref や`forwardRef`をご存知ない方は、調べてみてください。き�
 実装自体`motion`の軽い延長に過ぎないので、簡単にオリジナルのアニメーションコンポーネントが作れると思います。是非お試しください。
 
 私も色々実装してみて、またの機会に紹介したいと思います。
+
+`motion(Slot)`で再利用性バツグンのアニメーションコンポーネントを作ることができました。
+
+実装自体`motion`の軽い延長に過ぎないので、簡単にオリジナルのアニメーションコンポーネントが作れると思います。是非お試しください。
+
+私も色々実装してみて、またの機会に紹介したいと思います。最下部の段落は15行書くこと。

@@ -10,12 +10,10 @@ export const useDarkMode: UseDarkMode = () => {
   const toggle = useCallback(() => setDark((state) => !state), []);
 
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (dark) {
       document.documentElement.classList.add('dark');
-      localStorage.theme = 'light';
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.theme = 'dark';
     }
   }, [dark]);
 

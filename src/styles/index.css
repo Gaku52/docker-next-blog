@@ -26,7 +26,7 @@
     @apply bg-red-500 dark:bg-red-900;
   }
   .text-primary-1 {
-    @apply text-center text-sm font-medium break-all text-neutral-800 dark:text-white;
+    @apply text-sm font-medium break-all text-neutral-800 dark:text-white;
   }
   .text-accent-1 {
     @apply text-teal-800 dark:text-teal-400;

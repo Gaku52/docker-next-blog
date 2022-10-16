@@ -13,7 +13,7 @@ export const Profile = () => (
       <h1 className="text-2xl font-semibold text-primary-1">Gaku Ogasawara</h1>
     </div>
 
-    <p className="text-primary-1">
+    <p className="text-center text-primary-1">
       1996年生まれの26歳<br />
       2022年4月からプログラミング学習開始<br /><br />
       HTML/CSS/JavaScript/TypeScript/React/Next.js/Gitなどの学習をしております。

@@ -49,9 +49,6 @@
   .vstack {
     @apply flex flex-col;
   }
-  .vstack-2 {
-    @apply flex flex-col h-auto;
-  }
   .hstack {
     @apply flex items-center;
   }

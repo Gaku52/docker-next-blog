@@ -1,10 +1,10 @@
 ---
 title: 'JavaScriptの学習'
-excerpt: 'Nextブログテンプレートを利用することにより、Reactコンポーネントの理解やES6についての理解を深める。'
-coverImage: '/assets/blog/dynamic-routing/cover.jpg'
-date: '2022-10-16'
+excerpt: 'ES6についての理解を深める。'
+coverImage: '/assets/blog/hello-world/cover.jpg'
+date: '2022-10-17'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/hello-world/cover.jpg'
 tags:
   - 'React'
   - 'RadixUI'

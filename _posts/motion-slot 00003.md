@@ -1,10 +1,10 @@
 ---
-title: 'Reactの学習'
-excerpt: 'Nextブログテンプレートを利用することにより、Reactコンポーネントの理解やES6についての理解を深める。'
-coverImage: '/assets/blog/dynamic-routing/cover.jpg'
-date: '2022-10-16'
+title: 'tailwindcssの学習'
+excerpt: 'tailwindcssについての理解を深める。'
+coverImage: '/assets/blog/preview/cover.jpg'
+date: '2022-10-18'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/preview/cover.jpg'
 tags:
   - 'React'
   - 'RadixUI'

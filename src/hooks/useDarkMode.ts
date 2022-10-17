@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
+
 type UseDarkMode = () => {
   dark: boolean;
   toggle: () => void;

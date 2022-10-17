@@ -17,7 +17,7 @@
     @apply bg-slate-100 dark:bg-neutral-900;
   }
   .bg-primary-1 {
-    @apply bg-white border dark:bg-neutral-800 break-words;
+    @apply bg-white border hover:bg-blue-50 dark:bg-neutral-800 dark:hover:bg-slate-900 break-words;
   }
   .bg-primary-2 {
     @apply rounded-lg bg-white dark:bg-neutral-800 break-words;
@@ -50,7 +50,7 @@
     @apply flex flex-col;
   }
   .vstack-2 {
-    @apply flex flex-col hover:bg-blue-50 dark:hover:bg-slate-900;
+    @apply flex flex-col h-auto;
   }
   .hstack {
     @apply flex items-center;

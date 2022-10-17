@@ -15,7 +15,7 @@ export const Hamburger: React.VFC<Props> = ({ children }) => {
     <DropdownMenu
       sideOffset={8}
       collisionPadding={16}
-      className="vstack gap-2 max-h-80 bg-primary-1 rounded-lg shadow-lg"
+      className="vstack gap-2 max-h-80 bg-primary-2 shadow-lg"
       trigger={
         <button
           className="icon-btn rounded-full bg-white dark:bg-black shadow-xl"

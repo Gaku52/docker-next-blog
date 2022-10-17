@@ -1,5 +1,5 @@
 ---
-title: 'JavaScriptの学習'
+title: 'Reactの学習'
 excerpt: 'Nextブログテンプレートを利用することにより、Reactコンポーネントの理解やES6についての理解を深める。'
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
 date: '2022-10-16'

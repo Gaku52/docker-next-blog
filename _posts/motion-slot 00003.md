@@ -1,6 +1,6 @@
 ---
 title: 'tailwindcssの学習'
-excerpt: 'tailwindcssについての理解を深める。'
+excerpt: 'tailwindcssを利用しながらCSSの使い方も同時に学ぶ。'
 coverImage: '/assets/blog/preview/cover.jpg'
 date: '2022-10-18'
 ogImage:

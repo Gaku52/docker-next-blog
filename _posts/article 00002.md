@@ -6,9 +6,8 @@ date: '2022-10-17'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
 tags:
-  - 'React'
-  - 'RadixUI'
-  - 'FramerMotion'
+  - 'JavaScript'
+  - 'ES6'
   - '学習'
 ---
 

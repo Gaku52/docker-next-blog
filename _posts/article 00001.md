@@ -6,10 +6,11 @@ date: '2022-10-16'
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
 tags:
+  - 'Next.js'
   - 'React'
-  - 'RadixUI'
-  - 'FramerMotion'
-  - '学習'
+  - 'ES6'
+  - 'Markdown記法'
+  - '学習法'
 ---
 
 https://stitches.dev/

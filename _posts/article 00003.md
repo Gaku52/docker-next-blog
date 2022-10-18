@@ -6,10 +6,9 @@ date: '2022-10-18'
 ogImage:
   url: '/assets/blog/preview/cover.jpg'
 tags:
-  - 'React'
-  - 'RadixUI'
-  - 'FramerMotion'
-  - '学習'
+  - 'tailwindcss'
+  - 'CSS'
+  - 'CSSフレームワーク'
 ---
 
 https://stitches.dev/

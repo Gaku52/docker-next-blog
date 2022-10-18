@@ -13,7 +13,7 @@ export const Home: React.VFC<Props> = ({ posts }) => {
   return (
     <MainLayout
       main={
-        <div className="vstack sm:gap-12 gap-24 p-8 bg-primary-2">
+        <div className="vstack sm:gap-12 gap-36 p-8 bg-primary-2">
           <Stories posts={posts} title="最新の記事" icon={<RiChatNewLine />} />
           <Link href="/posts/page/1" passHref>
             <a className="button">

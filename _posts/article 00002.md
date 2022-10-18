@@ -1,6 +1,6 @@
 ---
 title: 'JavaScriptの学習'
-excerpt: 'ES6についての理解を深める。'
+excerpt: 'ES6についての理解を深めて、React/Next.jsの便利さを習得することを目的とする。'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2022-10-17'
 ogImage:

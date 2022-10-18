@@ -1,14 +1,15 @@
 ---
-title: 'tailwindcssの学習'
-excerpt: 'tailwindcssを利用しながらCSSの使い方も同時に学ぶ。'
+title: 'Gitの学習'
+excerpt: 'GitやGitHub,GitLabの違いからコマンド操作を使えるようにする。'
 coverImage: '/assets/blog/preview/cover.jpg'
-date: '2022-10-18'
+date: '2022-10-19'
 ogImage:
   url: '/assets/blog/preview/cover.jpg'
 tags:
-  - 'tailwindcss'
-  - 'CSS'
-  - 'CSSフレームワーク'
+  - 'React'
+  - 'RadixUI'
+  - 'FramerMotion'
+  - '学習'
 ---
 
 https://stitches.dev/

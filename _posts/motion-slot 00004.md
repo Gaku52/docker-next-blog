@@ -1,10 +1,10 @@
 ---
-title: 'JavaScriptの学習'
-excerpt: 'ES6についての理解を深めて、React/Next.jsの便利さを習得することを目的とする。'
-coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2022-10-17'
+title: 'Gitの学習'
+excerpt: 'GitやGitHub,GitLabの違いからコマンド操作を使えるようにする。'
+coverImage: '/assets/blog/preview/cover.jpg'
+date: '2022-10-19'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/blog/preview/cover.jpg'
 tags:
   - 'React'
   - 'RadixUI'

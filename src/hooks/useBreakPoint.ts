@@ -3,8 +3,8 @@ import { useWindowSize } from './useWindowSize';
 type Bp = 'sm' | 'md' | 'lg' | 'xl';
 
 const bps = {
-  sm: 640,
-  md: 768,
+  sm: {'max': '640px'},
+  md: {'max': '768px'},
   lg: 1024,
   xl: 1280,
 };

@@ -2,8 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   basePath: process.env.GITHUB_ACTIONS ? "/next-blog" : "",
-  trailingSlash: true,
-  swcMinify: true,
+  trailingSlash: true
 };
 
 module.exports = nextConfig;

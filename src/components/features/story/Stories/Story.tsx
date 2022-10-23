@@ -18,7 +18,7 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
           <Image
             src={coverImage}
             alt={`Cover Image for ${title}`}
-            className="sm:h-40 sm:w-64 h-32 rounded-md"
+            className="sm:h-40 sm:w-64 h-20 rounded-md"
           />
         </div>
         <div className="m-auto w-full sm:w-2/3 h-40 sm:h-40 p-3 sm:p-6 vstack gap-2 bg-primary-1">

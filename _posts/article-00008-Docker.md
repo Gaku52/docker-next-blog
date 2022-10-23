@@ -1,10 +1,10 @@
 ---
 title: 'Dockerの学習'
 excerpt: 'Dockerのコマンド操作から、ローカル環境での実行・本番環境へのデプロイの方法を学習する。'
-coverImage: '/assets/blog/docker-photo/docker.png'
+coverImage: '/assets/blog/docker-photo/Docker.png'
 date: '2022-10-23'
 ogImage:
-  url: '/assets/blog/docker-photo/docker.png'
+  url: '/assets/blog/docker-photo/Docker.png'
 tags:
   - 'Docker'
   - 'Linux'

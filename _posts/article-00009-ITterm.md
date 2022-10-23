@@ -1,28 +1,30 @@
 ---
-title: 'Dockerの学習'
-excerpt: 'Dockerの基礎用語理解をし、コマンド操作からでローカル環境での実行・本番環境へのデプロイまでの方法を学習する。'
-coverImage: '/assets/blog/docker-photo/Docker.png'
-date: '2022-10-23'
+title: 'IT用語①'
+excerpt: 'IT用語の意味の理解、また語源や使われ方などを学ぶ目的としております。'
+coverImage: '/assets/blog/ITterm/ITterm.jpeg'
+date: '2022-10-24'
 ogImage:
-  url: '/assets/blog/docker-photo/Docker.png'
+  url: '/assets/blog/ITterm/ITterm.jpeg'
 tags:
-  - 'Docker'
-  - 'Linux'
-  - 'Ubuntu'
+  - 'IT用語'
+  - '学習'
 ---
-
-https://stitches.dev/
 
 ## 概要
 
-Dockerの学習をするにあたって、学習し始めたばかりの段階においては苦戦したため、Dockerの用語理解が必要だと思いました。  
-そこで、今回の学習では「Dockerにおける基礎知識」の学習をしていきます。
+IT業界には専門用語が多く、それらを習得するにあたっての学習には工夫が必要だと考えています。  
+そこで本記事ページでは、用語理解を深める仕組み化を目的として各項目の必須知識や基本用語をまとめていきます。
 
-### Dockerとは？
+## Docker用語
 
-Dockerとは、コンテナ仮想化を用いてアプリケーション開発・配置・実行するためのオープンプラットフォームです。
-
-メリットとしては、①コンテナの起動・停止を軽量で高速に行うことができる。②OS（Mac,Windows）によって生じる環境構築時に起こりやすいエラーがあるが、コンテナをコピーすることで全く同じ環境で実行し環境構築の手間を省くことができる
+Dockerとは？
+[解説サイト様①「Docker入門（第一回）～Dockerとは何か、何が良いのか～」](https://knowledge.sakura.ad.jp/13265/)
+[解説サイト様②「【初心者向け】Docker（ドッカー）とは何か？」](https://aiacademy.jp/media/?p=1106)
+[解説サイト様③「Docker とは(AWS)」](https://aws.amazon.com/jp/docker/)
+[解説サイト様④「5分で分かるDocker」](https://atmarkit.itmedia.co.jp/ait/articles/2108/23/news022.html)
+[解説サイト様⑤「Dockerとは？使い方から基本コマンドまでサンプル付きで解説！」](https://camp.trainocate.co.jp/magazine/whats-docker/)
+[解説サイト様⑥「Dockerとは何かを入門者向けに解説！基本コマンドも」](https://udemy.benesse.co.jp/development/system/docker.html)
+[解説サイト様⑦「【5分でわかる】Dockerとは？わかりやすく解説」](https://engineer-life.dev/docker/)
 
 ### Framer Motion
 

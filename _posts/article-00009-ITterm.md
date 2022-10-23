@@ -18,12 +18,12 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 ## Docker用語
 
 Dockerとは？
-[解説サイト様①「Docker入門（第一回）～Dockerとは何か、何が良いのか～」](https://knowledge.sakura.ad.jp/13265/)
-[解説サイト様②「【初心者向け】Docker（ドッカー）とは何か？」](https://aiacademy.jp/media/?p=1106)
-[解説サイト様③「Docker とは(AWS)」](https://aws.amazon.com/jp/docker/)
-[解説サイト様④「5分で分かるDocker」](https://atmarkit.itmedia.co.jp/ait/articles/2108/23/news022.html)
-[解説サイト様⑤「Dockerとは？使い方から基本コマンドまでサンプル付きで解説！」](https://camp.trainocate.co.jp/magazine/whats-docker/)
-[解説サイト様⑥「Dockerとは何かを入門者向けに解説！基本コマンドも」](https://udemy.benesse.co.jp/development/system/docker.html)
+[解説サイト様①「Docker入門（第一回）～Dockerとは何か、何が良いのか～」](https://knowledge.sakura.ad.jp/13265/)  
+[解説サイト様②「【初心者向け】Docker（ドッカー）とは何か？」](https://aiacademy.jp/media/?p=1106)  
+[解説サイト様③「Docker とは(AWS)」](https://aws.amazon.com/jp/docker/)  
+[解説サイト様④「5分で分かるDocker」](https://atmarkit.itmedia.co.jp/ait/articles/2108/23/news022.html)  
+[解説サイト様⑤「Dockerとは？使い方から基本コマンドまでサンプル付きで解説！」](https://camp.trainocate.co.jp/magazine/whats-docker/)  
+[解説サイト様⑥「Dockerとは何かを入門者向けに解説！基本コマンドも」](https://udemy.benesse.co.jp/development/system/docker.html)  
 [解説サイト様⑦「【5分でわかる】Dockerとは？わかりやすく解説」](https://engineer-life.dev/docker/)
 
 ### Framer Motion

@@ -17,7 +17,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ## Docker用語
 
-Dockerとは？
+Dockerとは？  
 [解説サイト様①「Docker入門（第一回）～Dockerとは何か、何が良いのか～」](https://knowledge.sakura.ad.jp/13265/)  
 [解説サイト様②「【初心者向け】Docker（ドッカー）とは何か？」](https://aiacademy.jp/media/?p=1106)  
 [解説サイト様③「Docker とは(AWS)」](https://aws.amazon.com/jp/docker/)  

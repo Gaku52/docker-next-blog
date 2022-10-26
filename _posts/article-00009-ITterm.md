@@ -29,6 +29,16 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 [解説サイト様⑥「」](url)  
 [解説サイト様⑦「」](url)  
 
+### Hyper-V
+
+[解説サイト様①「【Hyper-V対応】Windows 11にWSL2/Linuxをインストールする」](https://sabakunotabito.hatenablog.com/entry/2021/10/17/203525)  
+[解説サイト様②「」](url)  
+[解説サイト様③「」](url)  
+[解説サイト様④「」](url)  
+[解説サイト様⑤「」](url)  
+[解説サイト様⑥「」](url)  
+[解説サイト様⑦「」](url)  
+
 ## Docker用語
 
 ### Docker
@@ -203,7 +213,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Kubernetes
 
-[解説サイト様①「」](url)  
+[解説サイト様①「Kubernetesとは何かを図でわかりやすく解説！Pod、Namespaceも」](https://udemy.benesse.co.jp/development/system/kubernetes.html)  
 [解説サイト様②「」](url)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
@@ -243,8 +253,8 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### ミドルウェア
 
-[解説サイト様①「」](url)  
-[解説サイト様②「」](url)  
+[解説サイト様①「ミドルウェアとは？役割や機能、種類をわかりやすく解説！」](https://it-trend.jp/development_tools/article/32-0044)  
+[解説サイト様②「AP Server」](https://www.infraexpert.com/info/server17.html)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
 [解説サイト様⑤「」](url)  

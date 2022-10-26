@@ -1,5 +1,5 @@
 ---
-title: 'IT用語①'
+title: 'IT用語学習 第1回「Linux・Docker編」'
 excerpt: 'IT用語の意味の理解、また語源や使われ方などを学ぶ目的としております。'
 coverImage: '/assets/blog/ITterm/ITterm.jpeg'
 date: '2022-10-24'
@@ -17,6 +17,18 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 「7回読めば覚える」という7回読み勉強法に習って参考URL7つを読むことにより、各用語についての理解を深めてスムーズに実践時に理解することができることを目的とします。  
 
+## Linux用語
+
+### WSL2
+
+[解説サイト様①「WSL2とHyper-Vの関係」](https://qiita.com/matarillo/items/ca1eecf8f9a3cd76f9ce)  
+[解説サイト様②「」](url)  
+[解説サイト様③「」](url)  
+[解説サイト様④「」](url)  
+[解説サイト様⑤「」](url)  
+[解説サイト様⑥「」](url)  
+[解説サイト様⑦「」](url)  
+
 ## Docker用語
 
 ### Docker
@@ -31,7 +43,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Dockerエンジン
 
-[解説サイト様①「」](url)  
+[解説サイト様①「Docker Engineとは何か」](https://zenn.dev/ryoatsuta/articles/64dcc2e2b4e0cf)  
 [解説サイト様②「」](url)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
@@ -41,7 +53,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Dockerホスト
 
-[解説サイト様①「」](url)  
+[解説サイト様①「【図解】Dockerの全体像を理解する -後編-」](https://onl.la/kXdM9bT)  
 [解説サイト様②「」](url)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
@@ -101,8 +113,8 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Docker Hub
 
-[解説サイト様①「」](url)  
-[解説サイト様②「」](url)  
+[解説サイト様①「Docker Hub 概要」](https://docs.docker.jp/docker-hub/overview.html)  
+[解説サイト様②「Dockerコンテナとは？知ってるとこんなに便利。徹底解説します」](https://www.winserver.ne.jp/column/docker-container/)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
 [解説サイト様⑤「」](url)  
@@ -211,11 +223,31 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Dockerマウント
 
-[解説サイト様①](url)  
-[解説サイト様②](url)  
-[解説サイト様③](url)  
-[解説サイト様④](url)  
-[解説サイト様⑤](url)  
-[解説サイト様⑥](url)  
-[解説サイト様⑦](url)  
+[解説サイト様①「【Docker】Dockerでホストのディレクトリをマウントする」](https://qiita.com/Yarimizu14/items/52f4859027165a805630)  
+[解説サイト様②「【Docker】第5回　マウントについて（bind）」](https://www.public.ne.jp/2019/02/08/docker-5/)  
+[解説サイト様③「さわって理解する Docker 入門」](https://www.ogis-ri.co.jp/otc/hiroba/technical/docker/part7.html)  
+[解説サイト様④「」]()  
+[解説サイト様⑤「」](url)  
+[解説サイト様⑥「」](url)  
+[解説サイト様⑦「」](url)  
+
+### IaC
+
+[解説サイト様①「Infrastructure as Codeとは？目的やメリット、注意点などを解説！」](https://www.rworks.jp/system/system-column/sys-entry/21725/)  
+[解説サイト様②「Infrastructure as Codeのメリットとデメリット｜ITインフラの運用自動化」](https://www.business-on-it.com/2005-iac/)  
+[解説サイト様③「」](url)  
+[解説サイト様④「」](url)  
+[解説サイト様⑤「」](url)  
+[解説サイト様⑥「」](url)  
+[解説サイト様⑦「」](url)  
+
+### ミドルウェア
+
+[解説サイト様①「」](url)  
+[解説サイト様②「」](url)  
+[解説サイト様③「」](url)  
+[解説サイト様④「」](url)  
+[解説サイト様⑤「」](url)  
+[解説サイト様⑥「」](url)  
+[解説サイト様⑦「」](url)  
 

@@ -93,7 +93,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Dockerfile
 
-[解説サイト様①「」](url)  
+[解説サイト様①「【初心者向け】Dockerfileとは」](https://onl.la/dvYga1Q)  
 [解説サイト様②「」](url)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
@@ -103,7 +103,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### docker image build
 
-[解説サイト様①「」](url)  
+[解説サイト様①「Dockerイメージビルドの仕組み」](https://onl.la/jaFzipA)  
 [解説サイト様②「」](url)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
@@ -113,7 +113,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Docker Repository
 
-[解説サイト様①「」](url)  
+[解説サイト様①「【Docker】レジストリとリポジトリ」](https://amateur-engineer-blog.com/difference-docker-registry-repository/#toc2)  
 [解説サイト様②「」](url)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
@@ -133,7 +133,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Data Volume
 
-[解説サイト様①「」](url)  
+[解説サイト様①「Data Volumeコンテナの利用方法まとめ【入門者向け】」](https://sinyblog.com/docker/data-volume/)  
 [解説サイト様②「」](url)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  

@@ -143,9 +143,9 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Docker Compose
 
-[解説サイト様①「」](url)  
-[解説サイト様②「」](url)  
-[解説サイト様③「」](url)  
+[解説サイト様①「Docker入門（第六回）〜Docker Compose〜」](https://knowledge.sakura.ad.jp/16862/)  
+[解説サイト様②「サクッと立ち上がる環境構築 docker-compose 入門」](https://www.youtube.com/watch?v=M3h_z-9DoMQ)  
+[解説サイト様③「docker-compose による開発環境構築入門【やっすんのエンジニア大学】」](https://www.youtube.com/watch?v=CgWQmT0hQaM)  
 [解説サイト様④「」](url)  
 [解説サイト様⑤「」](url)  
 [解説サイト様⑥「」](url)  

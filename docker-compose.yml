@@ -1,10 +1,13 @@
 version: '3'
+
 services:
-  next:
-    build: ./next-blog
+  app:
+    image: docker-nextjs-dev
     ports:
-      -8000:8000
+      - "3000:3000"
+    build: .
     volumes:
-      - ./next-blog:/app
-      - /app/node_modules
-    command: sh -c "npm && npm dev"
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./_posts:/app/_posts
+      - ./@types:/app/@types

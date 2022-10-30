@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "PORT=hoge next dev",
-    "build": "next build && next export",
-    "start": "next start",
+    "dev": "PORT=8000 next dev",
+    "build": "PORT=8000 next build &&PORT=8000 next export",
+    "start": "PORT=8000 next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",

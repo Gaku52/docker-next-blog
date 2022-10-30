@@ -1,12 +1,10 @@
 version: '3'
 services:
-  webapp01:
-    container_name: webapp01
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ./:/usr/src/next-blog
-    command: sh -c "cd next-blog && npm run dev"
+  next:
+    build: ./next-blog
     ports:
-      - 3000:3000
+      -8000:8000
+    volumes:
+      - ./next-blog:/app
+      - /app/node_modules
+    command: sh -c "npm && npm dev"

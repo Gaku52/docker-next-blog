@@ -153,7 +153,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### docker-compose.yml
 
-[解説サイト様①「」](url)  
+[解説サイト様①「docker-compose.yml の内容を理解しよう」](https://futureys.tokyo/lets-understand-contents-of-docker-compose-yml/)  
 [解説サイト様②「」](url)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
@@ -163,7 +163,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 
 ### Docker Swarm
 
-[解説サイト様①「」](url)  
+[解説サイト様①「Docker Swarm とは？」](https://onl.la/seEBayw)  
 [解説サイト様②「」](url)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  

@@ -22,7 +22,7 @@ IT業界には専門用語が多く、それらを習得するにあたっての
 ### WSL2
 
 [解説サイト様①「WSL2とHyper-Vの関係」](https://qiita.com/matarillo/items/ca1eecf8f9a3cd76f9ce)  
-[解説サイト様②「」](url)  
+[解説サイト様②「WSL2とは？Linuxが完全動作する仕組みと特長を紹介！」](https://and-engineer.com/articles/YfEnlBEAACMAm3GD)  
 [解説サイト様③「」](url)  
 [解説サイト様④「」](url)  
 [解説サイト様⑤「」](url)  

@@ -4,10 +4,13 @@ services:
   app:
     image: docker-nextjs-dev
     build: .
-    ports:
-      - "8000:8000"
     volumes:
       - ./src:/app/src
       - ./public:/app/public
       - ./_posts:/app/_posts
       - ./@types:/app/@types
+    tty: true
+    environment:
+      - WATCHPACK_POLLING=true
+    ports:
+      - "8000:8000"

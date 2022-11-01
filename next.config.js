@@ -4,8 +4,8 @@ const nextConfig = {
   // hot reload
   webpackDevMiddleware: (config) => {
     config.watchOptions = {
-      poll: 1, //チェック時間
-      aggregateTimeout: 1, // 遅延時間
+      poll: 800, //チェック時間
+      aggregateTimeout: 300, // 遅延時間
       ignored : ['node_modules']
     };
     return config;

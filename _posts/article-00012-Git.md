@@ -1,10 +1,10 @@
 ---
 title: 'GitHubの接続方式httpsとsshそれぞれのメリット・デメリットの調査'
 excerpt: 'この度は、GitHubのリポートリポジトリと接続する際の方式についての調査を行います。'
-coverImage: '/assets/blog/Ubuntu/Ubuntu.png'
+coverImage: '/assets/blog/github/github.png'
 date: '2022-11-05'
 ogImage:
-  url: '/assets/blog/Ubuntu/Ubuntu.png'
+  url: '/assets/blog/github/github.png'
 tags:
   - 'Ubuntu'
   - 'Linux'

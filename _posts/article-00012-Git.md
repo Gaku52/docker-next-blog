@@ -1,42 +1,41 @@
 ---
-title: 'GitHubの接続方式httpsとsshそれぞれのメリット・デメリットの調査'
+title: 'GitHubに接続するhttpsとsshの方式について'
 excerpt: 'この度は、GitHubのリポートリポジトリと接続する際の方式についての調査を行います。'
 coverImage: '/assets/blog/github/github.png'
-date: '2022-11-05'
+date: '2022-11-04'
 ogImage:
   url: '/assets/blog/github/github.png'
 tags:
-  - 'Ubuntu'
-  - 'Linux'
-  - 'WSL2'
+  - 'Git'
+  - 'GitHub'
+  - 'https'
+  - 'ssh'
 ---
 
 ## 概要
 
-GitHubのリポートリポジトリへ接続は、今やGitが開発時に必須ですので把握しておきたい所になると思います。  
-今回は、https接続とssh接続それぞれの特徴を記しておきます。  
+GitHub のリポートリポジトリへ接続は、今や Git が開発時に必須ですので把握しておきたい所になると思います。  
+今回は、https 接続と ssh 接続それぞれの特徴を記しておきます。
 
-## Httpsについて
+## https について
 
-GitHubが推奨しているのがHttps接続です。  
-リポジトリのHTTPSのデフォルトのURL形式を用いて、主にWeb上で通信が行われる。  
+GitHub が推奨しているのが https 接続です。  
+リポジトリの https のデフォルトの URL 形式を用いて、主に Web 上で通信が行われる。
 
-### 用語名
+[解説サイト様 ①「【解説】【GitHub】HTTPS と SSH の違い」](https://zenn.dev/nameless_sn/articles/the_differences_between_https_and_ssh)
 
-[解説サイト様①「【解説】【GitHub】HTTPSとSSHの違い」](https://zenn.dev/nameless_sn/articles/the_differences_between_https_and_ssh)  
+## SSH について
 
-## SSHについて
-
-はじめにGitHubにssh接続する際は、公開鍵・秘密鍵の生成します。  
-そしてGitHub上に公開鍵を設定することで接続ができるようにます。  
+はじめに GitHub に ssh 接続する際は、公開鍵・秘密鍵の生成します。  
+そして GitHub 上に公開鍵を設定することで接続ができるようにます。
 
 特徴  
 ・アカウント情報だけでリポジトリに書き込めるので、どこからでも簡単にアクセスできる。  
-・HTTPSはすべてのファイアウォールで開かれている点が良い。  
+・HTTPS はすべてのファイアウォールで開かれている点が良い。
 
-[解説サイト様①「GitHubにSSH接続する方法！(キーの作成からpushまで解説)」](https://codelikes.com/github-ssh-connection/)  
+[解説サイト様 ①「GitHub に SSH 接続する方法！(キーの作成から push まで解説)」](https://codelikes.com/github-ssh-connection/)
 
 ## 考察
 
-セキュリティ、速度、設定が簡単、参考記事の多さなど、私はどちらも設定してみたがHTTPSの方が楽であると感じました。  
-基本的に、HTTPSであれば 作業ディレクトリ>.git>config のconfigファイルにリポジトリのURLを設定します。  
+「セキュリティ、速度、設定が簡単か、参考記事が多いか」など、私はどちらも設定してみたが HTTPS の方が楽であると感じました。  
+HTTPS であれば 作業ディレクトリ>.git>config の config ファイルにリポジトリの URL を設定するだけのため非常に簡単だと思います。  

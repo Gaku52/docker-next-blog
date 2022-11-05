@@ -18,7 +18,7 @@ GitHubのリポートリポジトリへ接続は、今やGitが開発時に必�
 
 ## Httpsについて
 
-GitHubが推奨しているのがHttps接続です。
+GitHubが推奨しているのがHttps接続です。SSH接続は、
 
 ## SSHについて
 

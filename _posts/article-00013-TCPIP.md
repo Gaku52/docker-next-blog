@@ -6,7 +6,6 @@ date: '2022-11-05'
 ogImage:
   url: '/assets/blog/TCPIP/TCPIP.png'
 tags:
-  - 'TCP/IP'
   - 'セキュリティ'
   - 'プロトコル'
 ---

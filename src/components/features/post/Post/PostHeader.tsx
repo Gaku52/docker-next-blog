@@ -17,7 +17,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
         <Image
           src={coverImage}
           alt={`Cover Image for ${title}`}
-          className="w-full h-full object-cover border-2 border-black"
+          className="w-full h-full object-cover rounded-lg border-2 border-black"
         />
       </div>
       <h1 className="text-primary-1 text-3xl md:text-4xl font-bold tracking-tighter leading-tight">

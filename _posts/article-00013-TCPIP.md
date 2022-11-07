@@ -21,6 +21,10 @@ TCP/IPモデルとは、インターネットにおいて利用されている�
 
 ### トランスポート
 
+トランスポート層の代表的なプロトコルとして、TCP(Transmission Control Protocol)とUDP(User Datagram Protocol)があります。  
+
 ### インターネット
+
+
 
 ### リンク

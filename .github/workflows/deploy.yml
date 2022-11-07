@@ -40,3 +40,12 @@ jobs:
         with:
           github_token: ${{ secrets.TOKEN }}
           publish_dir: out
+      - name: AWS Deploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+        run: |
+          echo "AWS s3 sync"
+          aws s3 sync --region ap-northeast-1 ./out s3://${{ secrets.AWS_S3_BUCKET}} --delete
+          echo "AWS CF reset"
+          aws cloudfront create-invalidation --region ap-northeast-1 --distribution-id ${{ secrets.AWS_CF_ID }} --paths "/*"

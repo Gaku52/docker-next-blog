@@ -5,8 +5,8 @@ import {
   // PinterestShareButton,
   LineIcon,
   LineShareButton,
-  HatenaIcon,
-  HatenaShareButton,
+  // HatenaIcon,
+  // HatenaShareButton,
   TwitterIcon,
   TwitterShareButton,
 } from 'react-share';
@@ -56,9 +56,9 @@ export const Share: React.VFC<Props> = ({ post }) => {
         <LineShareButton {...config}>
           <LineIcon size={SIZE} round />
         </LineShareButton>
-        <HatenaShareButton {...config}>
+        {/* <HatenaShareButton {...config}>
           <HatenaIcon size={SIZE} round />
-        </HatenaShareButton>
+        </HatenaShareButton> */}
       </div>
     </div>
   );

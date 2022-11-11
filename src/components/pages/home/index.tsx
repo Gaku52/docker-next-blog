@@ -2,6 +2,7 @@ import { RiChatNewLine } from 'react-icons/ri';
 import { Link } from '@/components/common/Link';
 import { MainLayout } from '@/components/features/app/Layout';
 import { Profile } from '@/components/features/app/Profile';
+import { Share } from '@/components/features/post/Share';
 import { Stories } from '@/components/features/story/Stories';
 import { PostType } from '@/types/post';
 
@@ -22,7 +23,25 @@ export const Home: React.VFC<Props> = ({ posts }) => {
           </Link>
         </div>
       }
-      aside={<Profile />}
+      aside={
+          <>
+            <Share post=
+            {{
+            slug: '',
+            title: '',
+            date: '',
+            coverImage: '',
+            excerpt: '',
+            ogImage: {
+              url: ''
+            },
+            content: '',
+            tags: []
+            }} /><br />
+          <br />
+            <Profile />
+          </>
+            }
     />
   );
 };

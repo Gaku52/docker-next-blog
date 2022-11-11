@@ -1,8 +1,8 @@
 import {
   FacebookIcon,
   FacebookShareButton,
-  PinterestIcon,
-  PinterestShareButton,
+  // PinterestIcon,
+  // PinterestShareButton,
   LineIcon,
   LineShareButton,
   HatenaIcon,
@@ -21,7 +21,9 @@ type Props = {
 const SIZE = 40;
 
 export const Share: React.VFC<Props> = ({ post }) => {
-  const { title, slug, ogImage } = post;
+  const { title, slug
+    // , ogImage 
+        } = post;
 
   const url = `${ROOT_URL}/posts/${slug}`;
   const config = { title, url };
@@ -36,9 +38,9 @@ export const Share: React.VFC<Props> = ({ post }) => {
       </div>
 
       <div className="w-full center gap-4">
-        <PinterestShareButton {...config} media={ogImage.url}>
+        {/* <PinterestShareButton {...config} media={ogImage.url}>
           <PinterestIcon size={SIZE} round />
-        </PinterestShareButton>
+        </PinterestShareButton> */}
         <TwitterShareButton
           title={title}
           url={url}

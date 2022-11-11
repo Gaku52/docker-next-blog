@@ -40,11 +40,11 @@ export const Posts: React.VFC<Props> = ({ post }) => {
           </article>
         }
         aside={
-          <div className="vstack gap-10 h-full">
-            <Profile />
+          <div className="vstack gap-1 h-full">
             <div className="vstack gap-10 sticky top-20">
               {lg && <Toc />}
               <Share post={post} />
+              <Profile />
             </div>
           </div>
         }

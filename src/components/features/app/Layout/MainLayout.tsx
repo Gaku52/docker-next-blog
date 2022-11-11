@@ -19,11 +19,15 @@ export const MainLayout: React.VFC<Props> = ({
   const lg = useBreakPoint('lg');
 
   return (
-    <div className={cn(className, 'grid grid-cols-1 lg:grid-cols-3 gap-9')}>
+    <div className={cn(className, 'grid-cols-1 lg:grid-cols-3 gap-10 flex justify-center')}>
       <div className="lg:col-span-2">
-        <main>{main}</main>
+        <div className="xxl:w-full">
+          <main>{main}</main>
+        </div>
       </div>
-      <aside>{aside}</aside>
+        <div className="md:w-64">
+          <aside>{aside}</aside>
+        </div>
       {lg || (
         <Portal>
           <div className="z-50 fixed left-8 bottom-8">

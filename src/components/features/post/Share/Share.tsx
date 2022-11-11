@@ -18,11 +18,11 @@ type Props = {
   post: PostType;
 };
 
-const SIZE = 40;
+const SIZE = 28;
 
 export const Share: React.VFC<Props> = ({ post }) => {
   const { title, slug
-    // , ogImage 
+    // , ogImage
         } = post;
 
   const url = `${ROOT_URL}/posts/${slug}`;

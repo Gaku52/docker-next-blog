@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
     'slug',
     'coverImage',
     'excerpt',
-  ]).slice(0, 4);
+  ]).slice(0, 6);
 
   return {
     props: { posts },

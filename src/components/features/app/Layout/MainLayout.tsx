@@ -19,9 +19,9 @@ export const MainLayout: React.VFC<Props> = ({
   const lg = useBreakPoint('lg');
 
   return (
-    <div className={cn(className, 'grid-cols-1 lg:grid-cols-3 gap-10 flex justify-center')}>
+    <div className={cn(className, 'grid grid-cols-1 lg:grid-cols-3 gap-10 xs:flex xs:justify-center')}>
       <div className="lg:col-span-2">
-        <div className="xxl:w-full">
+        <div className="sm:w-full">
           <main>{main}</main>
         </div>
       </div>

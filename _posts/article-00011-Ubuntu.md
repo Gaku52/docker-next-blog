@@ -1,5 +1,5 @@
 ---
-title: 'WSL2でNext.jsプロジェクトの変更時にHOT Reloadが遅いときの解決法'
+title: 'WSL2でNext.jsアプリの変更時にHOT Reloadが遅いとき'
 excerpt: 'WSL2でWEBアプリ開発時において、HOTリロードが遅いときの状況と原因について記します。'
 coverImage: '/assets/blog/Ubuntu/Ubuntu.png'
 date: '2022-11-02'

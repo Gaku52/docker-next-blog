@@ -1,5 +1,5 @@
 ---
-title: 'Ubuntuのデフォルトuserをrootから変更する'
+title: 'Ubuntuのデフォルトユーザーを変更する'
 excerpt: 'WSLでデフォルトユーザーを変更したいとき、スムーズに設定できなかったため記録を残しておきます。'
 coverImage: '/assets/blog/Ubuntu/Ubuntu.png'
 date: '2022-11-01'

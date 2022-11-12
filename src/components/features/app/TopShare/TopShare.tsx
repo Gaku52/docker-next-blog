@@ -53,7 +53,10 @@ export const TopShare: React.VFC<Props> = ({ post }) => {
         <FacebookShareButton {...config}>
           <FacebookIcon size={SIZE} round />
         </FacebookShareButton>
-        <LineShareButton {...config}>
+        <LineShareButton
+          title={title}
+          url={url}
+        >
           <LineIcon size={SIZE} round />
         </LineShareButton>
         {/* <HatenaShareButton {...config}>

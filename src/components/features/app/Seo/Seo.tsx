@@ -5,17 +5,17 @@ import { joinPath } from '@/lib/joinPath';
 
 export const Seo = () => {
   const rootPath = useRootPath();
-  const imageURL = joinPath(ROOT_URL, '/assets/author.png');
+  const imageURL = joinPath(ROOT_URL, '/assets/top.png');
 
   return (
     <>
       <DefaultSeo
         defaultTitle="独学エンジニアブログ"
-        description="WEB系エンジニアになるために必要な学習をしております。"
+        description="WEB系エンジニアになるために、必要な学習をしています。"
         openGraph={{
           type: 'website',
           title: '独学エンジニアブログ',
-          description: 'WEB系エンジニアになるための必要な学習をしております。', 
+          description: 'WEB系エンジニアになるために、必要な学習をしています。',
           site_name: '独学エンジニアブログ',
           url: ROOT_URL,
           images: [

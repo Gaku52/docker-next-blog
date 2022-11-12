@@ -2,7 +2,7 @@ import { RiChatNewLine } from 'react-icons/ri';
 import { Link } from '@/components/common/Link';
 import { MainLayout } from '@/components/features/app/Layout';
 import { Profile } from '@/components/features/app/Profile';
-import { TopShare } from '@/components/features/app/TopShere';
+import { TopShare } from '@/components/features/app/TopShare';
 import { Stories } from '@/components/features/story/Stories';
 import { PostType } from '@/types/post';
 

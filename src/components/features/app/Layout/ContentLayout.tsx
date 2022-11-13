@@ -6,7 +6,7 @@ export const ContentLayout: React.VFC<Props> = ({ children, ...props }) => {
   return (
     <Slot {...props}>
       <div className="p-6">
-        <div className="container xl:max-w-7xl mx-auto">{children}</div>
+        <div className="container xl:max-w-screen-2xl mx-auto">{children}</div>
       </div>
     </Slot>
   );

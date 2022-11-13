@@ -1,6 +1,12 @@
 # Blog Template
 
-個人ブログのテンプレートです。あ
+この度は、このブログテンプレートでNext.jsを学習させて頂いております。
+
+[デプロイ先](gbyme.com)
+
+by Gaku52
+
+個人ブログのテンプレートです。
 
 `_posts`ディレクトリにmdファイルで作成した記事を追加するだけで始めることができます。もちろん、ZennやQiitaの投稿を流用することも可能です。
 
@@ -10,7 +16,7 @@
 
 ## Demo
 
-https://sub-t.github.io/blog-template/
+[Demo](https://sub-t.github.io/blog-template/)
 
 ## Features
 

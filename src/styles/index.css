@@ -46,6 +46,9 @@
   .zoom-box{
     @apply hover:scale-110;
   }
+  .zoom-box-2{
+    @apply hover:scale-150;
+  }
   .border-box{
     @apply bg-neutral-300 p-1 gap-1
   }

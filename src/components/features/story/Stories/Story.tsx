@@ -15,13 +15,13 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
     <Link href={`/posts/${slug}`}>
       <a className="justify-center select-none vstack flex-col cursor-pointer rounded-md focus:outline object-cover border-box  zoom-box transition-transform">
       <div className="p-0 sm:p-0 bg-primary-1">
-        <div className="m-auto center bg-slate-100 sm:bg-transparent overflow-hidden">
+        <div className=" bg-slate-100 sm:bg-transparent overflow-hidden">
           <Image
             src={coverImage}
             alt={`Cover Image for ${title}`}
             className="sm:h-full h-full"/>
         </div>
-        <div className="m-auto p-2 sm:p-3 border-t-4 border-neutral-300 vstack gap-2 sm:h-36 sm:w-full h-44 sm:text-xs">
+        <div className="m-auto sm:p-3 p-2 sm:h-36 h-44 sm:w-full sm:text-xs border-t-4 border-neutral-300 gap-2 vstack">
           <Date date={date} />
           <h3 className="m-auto sm:text-primary-1 sm:text-sm text-sm sm:font-bold font-bold">{title}</h3>
           <p className="m-auto text-neutral-700 dark:text-neutral-300 font-normal sm:text-xs text-xs line-clamp-2 sm:line-clamp-3">

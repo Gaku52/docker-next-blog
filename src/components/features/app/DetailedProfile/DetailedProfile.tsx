@@ -5,6 +5,7 @@ import { spreadsheet } from '@/config/spreadsheet';
 export const DetailedProfile = () => (
   <div className="select-none vstack items-center gap-5 p-6 bg-primary-2">
     <div className="vstack items-center gap-2">
+    <h1 className="text-lg font-bold text-primary-1">詳細なプロフィール</h1>
       <Image
         className="object-cover w-20 h-20 rounded-full"
         alt="avatar"
@@ -12,7 +13,6 @@ export const DetailedProfile = () => (
       />
       <h1 className="text-lg font-bold text-primary-1">gbyme</h1>
     </div>
-    <h1 className="text-lg font-bold text-primary-1">詳細な自己紹介</h1>
     <p className="text-center text-primary-1">
       1996年生まれの26歳<br />
       学習開始：2022年4月～現在<br /><br />

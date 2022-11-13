@@ -18,7 +18,7 @@ export const Hamburger: React.VFC<Props> = ({ children }) => {
       className="vstack gap-2 max-h-80 bg-primary-2 shadow-lg"
       trigger={
         <button
-          className="icon-btn rounded-full border-4 border-teal-800 bg-white dark:bg-black shadow-xl"
+          className="icon-btn rounded-full border-2 border-neutral-300 bg-white dark:bg-black shadow-xl"
           aria-label="hamburger menu"
         >
           <RiMenu4Line size={28} />

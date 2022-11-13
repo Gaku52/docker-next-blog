@@ -26,7 +26,9 @@ export const MainLayout: React.VFC<Props> = ({
         </div>
       </div>
         <div className="ml-auto lg:w-auto w-full">
-          <aside>{aside}</aside>
+          <aside>
+            {aside}
+          </aside>
         </div>
       {lg || (
         <Portal>

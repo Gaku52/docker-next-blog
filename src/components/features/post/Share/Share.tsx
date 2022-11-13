@@ -47,13 +47,16 @@ export const Share: React.VFC<Props> = ({ post }) => {
           via={SITE_NAME}
           related={[SITE_NAME, 'Next.js']}
           hashtags={tags}
+          className=" zoom-box-2 transition-transform"
         >
           <TwitterIcon size={SIZE} round />
         </TwitterShareButton>
-        <FacebookShareButton {...config}>
+        <FacebookShareButton {...config}
+          className=" zoom-box-2 transition-transform">
           <FacebookIcon size={SIZE} round />
         </FacebookShareButton>
-        <LineShareButton {...config}>
+        <LineShareButton {...config}
+          className=" zoom-box-2 transition-transform">
           <LineIcon size={SIZE} round />
         </LineShareButton>
         {/* <HatenaShareButton {...config}>

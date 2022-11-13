@@ -1,10 +1,12 @@
-# Blog Template
+# MITのBlog Templateを用いてのブログ作成
 
 この度は、このブログテンプレートでNext.jsを学習させて頂いております。
 
 [デプロイ先](gbyme.com)
 
 by Gaku52
+
+## Blog Template作成者様の説明
 
 個人ブログのテンプレートです。
 
@@ -14,11 +16,11 @@ by Gaku52
 
 [Next.js + GitHub Pagesのブログテンプレートを作った →](https://zenn.dev/subt/articles/957bd5d01485e1)
 
-## Demo
+### Demo
 
 [Demo](https://sub-t.github.io/blog-template/)
 
-## Features
+### Features
 
 - レスポンシブ対応
 - ダークモード
@@ -27,7 +29,7 @@ by Gaku52
 - next-seoでSEO対策済み
 - OGP対応
 
-## Development
+### Development
 
 ```bash
 git clone https://github.com/sub-t/blog-template project-name
@@ -36,12 +38,12 @@ yarn
 yarn dev
 ```
 
-## Deployment
+### Deployment
 
 こちらの記事を参考にしてください。
 
 [Next.js で作ったブログを GitHub Pages にデプロイする →](https://jamband.github.io/blog/2021/08/deploy-nextjs-app-to-github-pages/)
 
-## License
+### License
 
 MIT

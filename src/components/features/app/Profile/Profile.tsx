@@ -14,7 +14,7 @@ export const Profile = () => (
     </div>
 
     <p className="text-center text-primary-1">
-      WEB系エンジニアになるために、必要な学習をしています。<br />
+      WEB系エンジニアになるために、日々学習中です。<br />
       1996年生まれの26歳/学習開始:2022年4月～現在
       {/* <h1 className="text-sm font-bold text-primary-1">現在学習中の選定した技術一覧</h1><br />
       ◆フロントエンド<br />

@@ -7,7 +7,7 @@
 }
 
 .toc-link {
-  @apply text-sm sm:text-base font-normal text-neutral-600 dark:text-neutral-400 hover:text-teal-800 dark:hover:text-teal-200  block;
+  @apply text-sm sm:text-base font-normal text-neutral-600 dark:text-neutral-400 hover:underline dark:hover:underline  block;
 }
 
 .toc-list .toc-list .toc-link {
@@ -15,5 +15,5 @@
 }
 
 .is-active-link {
-  @apply text-neutral-900 dark:text-black bg-neutral-200;
+  @apply text-neutral-900 dark:text-neutral-900 bg-neutral-200;
 }

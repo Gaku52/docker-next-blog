@@ -5,6 +5,7 @@ import { sns } from '@/config/sns';
 export const TopProfile = () => (
   <div className="select-none vstack items-center gap-5 p-6 bg-primary-2">
     <div className="vstack items-center gap-2">
+    <h1 className="text-lg font-bold text-primary-1">プロフィール</h1>
       <Image
         className="object-cover w-20 h-20 rounded-full"
         alt="avatar"
@@ -14,7 +15,7 @@ export const TopProfile = () => (
     </div>
 
     <p className="text-center text-primary-1">
-      WEB系エンジニアになるために、必要な学習をしています。<br /><br />
+      WEB系エンジニアになるために、日々学習中です。<br /><br />
       1996年生まれの26歳<br />
       学習開始:2022年4月～現在
       {/* <h1 className="text-sm font-bold text-primary-1">現在学習中の選定した技術一覧</h1><br />

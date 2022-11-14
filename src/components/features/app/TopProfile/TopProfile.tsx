@@ -2,7 +2,7 @@ import { Image } from '@/components/common/Image';
 import { Link } from '@/components/common/Link';
 import { sns } from '@/config/sns';
 
-export const Profile = () => (
+export const TopProfile = () => (
   <div className="select-none vstack items-center gap-5 p-6 bg-primary-2">
     <div className="vstack items-center gap-2">
       <Image
@@ -14,8 +14,9 @@ export const Profile = () => (
     </div>
 
     <p className="text-center text-primary-1">
-      WEB系エンジニアになるために、必要な学習をしています。<br />
-      1996年生まれの26歳/学習開始:2022年4月～現在
+      WEB系エンジニアになるために、必要な学習をしています。<br /><br />
+      1996年生まれの26歳<br />
+      学習開始:2022年4月～現在
       {/* <h1 className="text-sm font-bold text-primary-1">現在学習中の選定した技術一覧</h1><br />
       ◆フロントエンド<br />
       HTML/CSS/JavaScript<br />

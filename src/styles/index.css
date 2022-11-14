@@ -50,7 +50,7 @@
     @apply hover:scale-150;
   }
   .border-box{
-    @apply bg-neutral-300 p-1 gap-1
+    @apply bg-neutral-300 dark:bg-neutral-400 p-1 gap-1
   }
 }
 

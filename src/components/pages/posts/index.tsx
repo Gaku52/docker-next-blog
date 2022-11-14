@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo';
 import { MainLayout } from '@/components/features/app/Layout';
-// import { Profile } from '@/components/features/app/Profile';
+import { Profile } from '@/components/features/app/Profile';
 import { Post } from '@/components/features/post/Post';
 import { Share } from '@/components/features/post/Share';
 import { Toc } from '@/components/features/post/Toc';
@@ -36,15 +36,19 @@ export const Posts: React.VFC<Props> = ({ post }) => {
       <MainLayout
         main={
           <article>
-            <Post post={post} />
+            <div className="vstack gap-10">
+              <Post post={post} />
+              <Share post={post} />
+              <div className='text-xs'>
+                <Profile />
+              </div>
+            </div>
           </article>
         }
         aside={
           <div className="vstack gap-10 h-full">
-            {/* <Profile /> */}
-            <div className="vstack gap-10 sticky top-20">
+            <div className="vstack gap-10">
               {lg && <Toc />}
-              <Share post={post} />
             </div>
           </div>
         }

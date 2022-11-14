@@ -1,12 +1,12 @@
 import {
   FacebookIcon,
   FacebookShareButton,
-  // PinterestIcon,
-  // PinterestShareButton,
+  PinterestIcon,
+  PinterestShareButton,
   LineIcon,
   LineShareButton,
-  // HatenaIcon,
-  // HatenaShareButton,
+  HatenaIcon,
+  HatenaShareButton,
   TwitterIcon,
   TwitterShareButton,
 } from 'react-share';
@@ -22,7 +22,7 @@ const SIZE = 28;
 
 export const Share: React.VFC<Props> = ({ post }) => {
   const { title, slug
-    // , ogImage
+    , ogImage
         } = post;
 
   const url = `${ROOT_URL}/posts/${slug}`;
@@ -31,16 +31,19 @@ export const Share: React.VFC<Props> = ({ post }) => {
   const tags = post.tags.map((tag) => tag.split(' ')[0]);
 
   return (
-    <div className="select-none vstack gap-3 p-6 bg-primary-2">
+    <div className="select-none vstack gap-3 p-10 bg-primary-2">
       <div className="center gap-2 py-2 px-3 text-lg font-bold text-primary-1 uppercase">
         <MdShare />
-        share
+        シェアする
       </div>
 
-      <div className="w-full center gap-4">
-        {/* <PinterestShareButton {...config} media={ogImage.url}>
+      <div className="w-full center gap-10">
+        <PinterestShareButton {...config} 
+          media={ogImage.url}
+          className=" zoom-box-2 transition-transform"
+        >
           <PinterestIcon size={SIZE} round />
-        </PinterestShareButton> */}
+        </PinterestShareButton>
         <TwitterShareButton
           title={title}
           url={url}
@@ -59,9 +62,11 @@ export const Share: React.VFC<Props> = ({ post }) => {
           className=" zoom-box-2 transition-transform">
           <LineIcon size={SIZE} round />
         </LineShareButton>
-        {/* <HatenaShareButton {...config}>
+        <HatenaShareButton {...config}
+          className=" zoom-box-2 transition-transform"
+        >
           <HatenaIcon size={SIZE} round />
-        </HatenaShareButton> */}
+        </HatenaShareButton>
       </div>
     </div>
   );

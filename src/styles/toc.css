@@ -1,19 +1,19 @@
 .toc-list {
-  @apply vstack gap-3;
+  @apply vstack gap-0;
 }
 
 .toc-list .toc-list {
-  @apply vstack gap-2 pl-4 mt-1;
+  @apply vstack gap-0 pl-3 mt-1;
 }
 
 .toc-link {
-  @apply text-sm sm:text-base font-normal text-neutral-600 dark:text-neutral-400 hover:text-teal-800 dark:hover:text-teal-200;
+  @apply text-sm sm:text-base font-normal text-neutral-600 dark:text-neutral-400 hover:text-teal-800 dark:hover:text-teal-200  block;
 }
 
 .toc-list .toc-list .toc-link {
-  @apply text-sm;
+  @apply text-sm block;
 }
 
 .is-active-link {
-  @apply text-black dark:text-teal-200 block bg-neutral-200;
+  @apply text-neutral-900 dark:text-black bg-neutral-200;
 }

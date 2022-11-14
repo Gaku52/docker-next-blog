@@ -21,7 +21,7 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
             alt={`Cover Image for ${title}`}
             className="sm:h-full h-full"/>
         </div>
-        <div className="m-auto sm:p-3 p-2 sm:h-36 h-44 sm:w-full sm:text-xs border-t-4 border-neutral-300 gap-2 vstack">
+        <div className="m-auto sm:p-3 p-2 sm:h-36 h-44 sm:w-full sm:text-xs border-t-4 border-neutral-300 dark:border-neutral-400 gap-2 vstack">
           <Date date={date} />
           <h3 className="m-auto sm:text-primary-1 sm:text-sm text-sm sm:font-bold font-bold">{title}</h3>
           <p className="m-auto text-neutral-700 dark:text-neutral-300 font-normal sm:text-xs text-xs line-clamp-2 sm:line-clamp-3">

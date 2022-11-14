@@ -18,7 +18,7 @@ type Props = {
   post: PostType;
 };
 
-const SIZE = 28;
+const SIZE = 24;
 
 export const TopShare: React.VFC<Props> = ({ post }) => {
   const { title, slug

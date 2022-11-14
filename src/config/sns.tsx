@@ -1,5 +1,5 @@
 import { SiGithub, SiTwitter
-  // , SiZenn 
+  // , SiZenn
 } from 'react-icons/si';
 
 export const sns = [

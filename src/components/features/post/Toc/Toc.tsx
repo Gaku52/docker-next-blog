@@ -8,7 +8,7 @@ export const Toc: React.VFC = () => {
       tocSelector: '.toc',
       contentSelector: '.post',
       headingSelector: 'h2, h3',
-      headingsOffset: 220,
+      headingsOffset: 240,
       scrollSmoothOffset: -70,
     });
 

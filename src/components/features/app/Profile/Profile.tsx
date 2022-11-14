@@ -16,8 +16,8 @@ export const Profile = () => (
     <p className="text-center text-primary-1">
       WEB系エンジニアになるために、必要な学習をしています。<br /><br />
       1996年生まれの26歳<br />
-      学習開始：2022年4月～現在<br /><br />
-      <h1 className="text-sm font-bold text-primary-1">現在学習中の選定した技術一覧</h1><br />
+      学習開始:2022年4月～現在<br /><br />
+      {/* <h1 className="text-sm font-bold text-primary-1">現在学習中の選定した技術一覧</h1><br />
       ◆フロントエンド<br />
       HTML/CSS/JavaScript<br />
       TypeScript/React/Next.js<br /><br />
@@ -33,7 +33,7 @@ export const Profile = () => (
       <br />
       ◆今後の学習予定<br />
       CI/CDパイプラインの構築<br />
-      Terraformでインフラのコード化<br /><br />
+      Terraformでインフラのコード化<br /><br /> */}
     </p>
 
     <div className="flex gap-4">

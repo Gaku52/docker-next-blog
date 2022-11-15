@@ -11,7 +11,7 @@ export const TopProfile = () => (
         alt="avatar"
         src="/assets/author.png"
       />
-      <h1 className="text-lg font-bold text-primary-1">gbyme</h1>
+      <h1 className="text-lg font-bold text-primary-1">gbyme.com</h1>
     </div>
 
     <p className="text-center text-primary-1 text-sm">

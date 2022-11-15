@@ -3,7 +3,7 @@ import { Link } from '@/components/common/Link';
 import { spreadsheet } from '@/config/spreadsheet';
 
 export const DetailedProfile = () => (
-  <div className="select-none vstack items-center gap-1 p-1 bg-primary-2">
+  <div className="select-none vstack items-center gap-2 p-2 bg-primary-2">
     <div className="font-bold text-2xl">詳細プロフィール</div>
     <div className="items-center gap-24 grid p-5 grid-cols-2">
     <h1 className="text-lg font-bold text-primary-1">
@@ -14,7 +14,7 @@ export const DetailedProfile = () => (
       />
       <h1 className="center text-lg font-bold text-primary-1">Gaku Ogasawara</h1>
     </h1>
-        <div className="center font-medium">
+        <div className="center font-medium text-primary-1">
         1996年生まれの26歳<br />
         学習期間 : 2022年4月～現在
         </div>

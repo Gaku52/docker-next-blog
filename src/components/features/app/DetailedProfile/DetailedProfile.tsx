@@ -1,11 +1,12 @@
+import { GrAccessibility } from 'react-icons/gr';
 import { Image } from '@/components/common/Image';
 import { Link } from '@/components/common/Link';
 import { spreadsheet } from '@/config/spreadsheet';
 
 export const DetailedProfile = () => (
-  <div className="select-none vstack items-center gap-2 p-2 bg-primary-2">
-    <div className="font-bold text-xl text-primary-1">詳細プロフィール</div>
-    <div className="items-center gap-24 grid p-5 grid-cols-2">
+  <div className="select-none vstack items-center gap-5 bg-primary-2">
+    <div className="font-bold text-xl center gap-2 py-2 px-3 mt-20 border-b-2 border-teal-800 dark:border-teal-400 text-primary-1"><GrAccessibility />詳細プロフィール</div>
+    <div className="items-center gap-20 grid p-5 grid-cols-2">
       <h1 className="text-primary-1">
         <Image
             className="object-cover w-16 h-16 rounded-full m-auto"
@@ -49,9 +50,9 @@ export const DetailedProfile = () => (
     </p>
     {spreadsheet.map(({ href, icon, label }) => (
           <Link key={href} href={href} passHref>
-            <a className="text-primary-1 center hover:underline" aria-label={label}>
+            <a className="text-primary-1 center hover:underline mb-20" aria-label={label}>
             <h1 className="m-auto text-base font-medium text-primary-1">スキルシート</h1>
-              {icon}<br />
+              {icon}
             </a>
           </Link>
           ))}

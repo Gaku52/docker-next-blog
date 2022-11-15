@@ -19,7 +19,7 @@ export const MainLayout: React.VFC<Props> = ({
   const lg = useBreakPoint('lg');
 
   return (
-    <div className={cn(className, 'grid lg:grid-cols-5 grid-cols-1 gap-8')}>
+    <div className={cn(className, 'grid lg:grid-cols-5 grid-cols-1 gap-12')}>
       <div className="lg:col-span-4">
         <div className="mr-auto w-full">
           <main>{main}</main>

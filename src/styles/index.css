@@ -35,7 +35,7 @@
     @apply text-teal-800 dark:text-teal-400;
   }
   .button {
-    @apply center gap-2 py-3 px-4 rounded-lg text-base font-normal bg-teal-700 text-white;
+    @apply center gap-2 py-3 px-4 rounded-lg text-base font-normal w-80 m-auto bg-teal-600 hover:bg-teal-700 hover:transition-all text-white;
   }
   .icon-btn {
     @apply text-primary-1 p-3;

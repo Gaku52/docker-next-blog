@@ -1,11 +1,11 @@
-import { GrAccessibility } from 'react-icons/gr';
+import { MdAccountBox } from 'react-icons/md';
 import { Image } from '@/components/common/Image';
 import { Link } from '@/components/common/Link';
 import { spreadsheet } from '@/config/spreadsheet';
 
 export const DetailedProfile = () => (
   <div className="select-none vstack items-center gap-5 bg-primary-2">
-    <div className="font-bold text-xl center gap-2 py-2 px-3 mt-20 border-b-2 border-teal-800 dark:border-teal-400 text-primary-1"><GrAccessibility />詳細プロフィール</div>
+    <div className="font-bold text-xl center gap-2 py-2 px-3 mt-20 border-b-2 border-teal-800 dark:border-teal-400 text-primary-1"><MdAccountBox />詳細プロフィール</div>
     <div className="items-center gap-20 grid p-5 grid-cols-2">
       <h1 className="text-primary-1">
         <Image

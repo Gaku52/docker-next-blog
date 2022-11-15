@@ -6,13 +6,13 @@ export const DetailedProfile = () => (
   <div className="select-none vstack items-center gap-2 p-2 bg-primary-2">
     <div className="font-bold text-xl text-primary-1">詳細プロフィール</div>
     <div className="items-center gap-24 grid p-5 grid-cols-2">
-      <h1 className="text-lg font-bold text-primary-1">
+      <h1 className="text-primary-1">
         <Image
-            className="object-cover w-20 h-20 rounded-full m-auto"
+            className="object-cover w-16 h-16 rounded-full m-auto"
             alt="avatar"
             src="/assets/author.png"
         />
-        <h1 className="center lg:text-base font-bold text-primary-1">Gaku Ogasawara</h1>
+        <h1 className="center lg:text-base text-xs font-bold text-primary-1">Gaku Ogasawara</h1>
       </h1>
       <div className="center lg:text-base text-xs font-medium text-primary-1">
         1996年生まれの26歳<br />
@@ -37,9 +37,9 @@ export const DetailedProfile = () => (
       <div className="font-semibold">
       ◆開発環境<br />
       PC:Windows 11<br />
-      OS:Linux(WSL2上でUbuntu)<br />
+      OS:Linux(WSL2,Ubuntu)<br />
       Editor:Visual Studio Code<br />
-      コンテナ仮想化技術:Docker<br /><br />
+      コンテナ仮想化:Docker<br /><br />
       </div>
       <div className="font-semibold">
       ◆今後の学習予定<br />

@@ -5,7 +5,7 @@ import { spreadsheet } from '@/config/spreadsheet';
 export const DetailedProfile = () => (
   <div className="select-none vstack items-center gap-2 p-2 bg-primary-2">
     <div className="font-bold text-xl text-primary-1">詳細プロフィール</div>
-    <div className="items-center gap-24 grid p-5 grid-cols-3">
+    <div className="items-center gap-24 grid p-5 grid-cols-2">
       <h1 className="text-lg font-bold text-primary-1">
         <Image
             className="object-cover w-20 h-20 rounded-full m-auto"
@@ -18,14 +18,6 @@ export const DetailedProfile = () => (
         1996年生まれの26歳<br />
         学習期間 : 2022.04～<br />
         </div>
-          {spreadsheet.map(({ href, icon, label }) => (
-          <Link key={href} href={href} passHref>
-            <a className="text-primary-1 center hover:underline" aria-label={label}>
-            <h1 className="m-auto text-base font-medium text-primary-1">スキルシート</h1>
-              {icon}
-            </a>
-          </Link>
-          ))}
     </div>
     <h1 className="col-span-4 m-auto text-base font-bold text-primary-1">選定した技術一覧</h1><br />
     <p className="grid lg:grid-cols-5 gap-8 text-center text-primary-1">
@@ -55,6 +47,13 @@ export const DetailedProfile = () => (
       Terraformでインフラのコード化<br /><br />
       </div>
     </p>
-
+    {spreadsheet.map(({ href, icon, label }) => (
+          <Link key={href} href={href} passHref>
+            <a className="text-primary-1 center hover:underline" aria-label={label}>
+            <h1 className="m-auto text-base font-medium text-primary-1">スキルシート</h1>
+              {icon}<br />
+            </a>
+          </Link>
+          ))}
   </div>
 );

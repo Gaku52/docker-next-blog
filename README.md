@@ -1,4 +1,4 @@
-# MITのBlog Templateを用いてのブログ作成
+# MITライセンスのBlog Templateを用いてのブログ作成
 
 この度は、このブログテンプレートでNext.jsを学習させて頂いております。
 

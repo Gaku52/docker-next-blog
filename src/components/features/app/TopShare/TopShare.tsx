@@ -32,7 +32,7 @@ export const TopShare: React.VFC<Props> = ({ post }) => {
 
   return (
     <div className="select-none vstack gap-3 p-6 bg-primary-2">
-      <div className="center gap-2 py-2 px-3 xs:text-lg text-xs font-bold text-primary-1 uppercase">
+      <div className="center gap-2 py-2 px-3 text-xs font-bold text-primary-1 uppercase">
         <MdShare />
         シェアする
       </div>

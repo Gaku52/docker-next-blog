@@ -5,7 +5,7 @@ import { sns } from '@/config/sns';
 export const TopProfile = () => (
   <div className="select-none vstack items-center gap-5 p-6 bg-primary-2">
     <div className="vstack items-center gap-3">
-    <h1 className="lg:text-base text-xs font-bold text-primary-1">プロフィール</h1>
+    <h1 className="xl:text-base text-xs font-bold text-primary-1">プロフィール</h1>
       <Image
         className="object-cover w-20 h-20 rounded-full"
         alt="avatar"

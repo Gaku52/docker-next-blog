@@ -4,7 +4,7 @@ import { spreadsheet } from '@/config/spreadsheet';
 
 export const DetailedProfile = () => (
   <div className="select-none vstack items-center gap-2 p-2 bg-primary-2">
-    <div className="font-bold text-2xl">詳細プロフィール</div>
+    <div className="font-bold text-xl text-primary-1">詳細プロフィール</div>
     <div className="items-center gap-24 grid p-5 grid-cols-2">
     <h1 className="text-lg font-bold text-primary-1">
     <Image
@@ -12,14 +12,14 @@ export const DetailedProfile = () => (
         alt="avatar"
         src="/assets/author.png"
       />
-      <h1 className="center text-lg font-bold text-primary-1">Gaku Ogasawara</h1>
+      <h1 className="center lg:text-base font-bold text-primary-1">Gaku Ogasawara</h1>
     </h1>
-        <div className="center font-medium text-primary-1">
+        <div className="center lg:text-base text-xs font-medium text-primary-1">
         1996年生まれの26歳<br />
-        学習期間 : 2022年4月～現在
+        学習期間 : 2022.04～
         </div>
     </div>
-    <h1 className="col-span-4 m-auto text-lg font-bold text-primary-1">現在学習中の選定した技術一覧</h1><br />
+    <h1 className="col-span-4 m-auto text-base font-bold text-primary-1">選定した技術一覧</h1><br />
     <p className="grid lg:grid-cols-5 gap-8 text-center text-primary-1">
       <div className="font-semibold">
       ◆フロントエンド<br />

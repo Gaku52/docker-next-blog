@@ -1,8 +1,8 @@
 ---
-title: 'ブログテンプレート学習'
-excerpt: 'Nextブログテンプレートを利用することにより、Reactコンポーネントの理解やES6についての理解を深める。'
+title: 'MITライセンスのブログテンプレートを用いた今後の学習計画'
+excerpt: 'フロントエンド,バックエント,インフラやDevOpsなどそれぞれの学習方針を明確にし、今後作成するポートフォリオの要件定義を行う。'
 coverImage: '/assets/blog/study-photo/study-01.jpg'
-date: '2022-11-16'
+date: '2022-11-18'
 ogImage:
   url: '/assets/blog/study-photo/study-01.jpg'
 tags:

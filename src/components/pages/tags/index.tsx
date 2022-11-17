@@ -9,8 +9,8 @@ type Props = {
 
 export const Tags: React.VFC<Props> = ({ tags }) => {
   return (
-    <MainLayout
-      main={
+    // <MainLayout
+    //   main={
         <div className="vstack gap-10 p-20 bg-primary-2">
           <div className="center">
             <h2 className="center gap-2 py-2 px-3 border-b-2 border-teal-800 dark:border-teal-400 text-xl font-bold text-primary-1">
@@ -27,8 +27,8 @@ export const Tags: React.VFC<Props> = ({ tags }) => {
             ))}
           </div>
         </div>
-      }
-      aside={<Profile />}
-    />
+      // }
+      // aside={<Profile />}
+    // />
   );
 };

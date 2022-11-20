@@ -1,5 +1,5 @@
 ---
-title: 'IT用語学習 第1回「Docker」'
+title: 'IT用語学習「Docker」'
 excerpt: 'IT用語の意味の理解、また語源や使われ方などを学ぶ目的としております。'
 coverImage: '/assets/blog/ITterm/ITterm.jpeg'
 date: '2022-10-24'

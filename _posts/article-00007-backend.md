@@ -18,11 +18,15 @@ WEBサーバは、起動中ずっとアクセスを待機しており
 
 ### ◆apacheとは？
 
-apacheとは、正式には「Apache HTTP Server」といいミドルウェアの中のWEBサーバにあたる。  
+![apache_logo](/assets/blog/backend/apache_logo.png)  
+
+apacheとは、正式には「Apache HTTP Server」といいミドルウェアのWEBサーバにあたる。  
 1995年にリリースされており、古くからあるWEBサーバで現在もシェア率が高い。  
 スクリプト言語により動的なコンテンツを返す必要がある場合は、Apache HTTP Serverの方が優れている。
 
 ### ◆nginxとは？
+
+![nginx_logo](/assets/blog/backend/nginx_logo.png)  
 
 nginxは、apacheの次に使われているWEBサーバである。  
 

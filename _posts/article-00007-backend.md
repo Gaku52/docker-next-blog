@@ -30,5 +30,4 @@ apacheとは、正式には「Apache HTTP Server」といいミドルウェア�
 
 nginxは、apacheの次に使われているWEBサーバである。  
 またApacheWEBサーバーのパフォーマンス制限に対処すべくして生み出された、高負荷に強いWEBサーバーである。C10K問題に対応している。  
-
 Nginxの設定ファイル（nginx.conf）は、Apacheの設定ファイル（httpd.conf）よりも直感的で設定しやすい面もある。  

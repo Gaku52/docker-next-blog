@@ -20,7 +20,7 @@ WEBサーバは、起動中はアクセスを待機しており
 
 ![apache_logo](/assets/blog/backend/apache_logo.png)  
 
-apacheとは、正式には「Apache HTTP Server」といいWEBサーバ用のソフトウェアである。  
+apacheとは正式には「Apache HTTP Server」といい、WEBサーバ用のソフトウェアである。  
 1995年にリリースされており、古くからあり現在もシェア率が高い。  
 スクリプト言語により動的なコンテンツを返す必要がある場合は、Apache HTTP Serverが優れている。
 
@@ -29,5 +29,5 @@ apacheとは、正式には「Apache HTTP Server」といいWEBサーバ用の�
 ![nginx_logo](/assets/blog/backend/nginx_logo.png)  
 
 nginxは、apacheの次(2番目)に使われているWEBサーバ用のソフトウェアである。  
-またApache HTTP Serverサーバーのパフォーマンス制限に対処すべくして生み出された、高負荷に強い。C10K問題に対応している。  
+またApache HTTP Serverのパフォーマンス制限に対処すべくして生み出された、高負荷に強い。C10K問題に対応している。  
 Nginxの設定ファイル（nginx.conf）は、Apacheの設定ファイル（httpd.conf）よりも直感的で設定しやすい面もある。  

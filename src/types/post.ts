@@ -8,6 +8,5 @@ export type PostType = {
     url: string;
   };
   content: string;
-  postImage: string;
   tags: string[];
 };

@@ -1,5 +1,5 @@
 ---
-title: 'WEBサーバとは？バックエンド学習①'
+title: 'WEBサーバとは？'
 excerpt: 'apacheとnginxの違いを調査し、技術選定理由とバックエンドのチューニングのための知識をつける。'
 coverImage: '/assets/blog/backend/backend.png'
 date: '2022-11-22'

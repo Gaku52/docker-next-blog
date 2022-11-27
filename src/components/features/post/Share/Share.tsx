@@ -40,7 +40,7 @@ export const Share: React.VFC<Props> = ({ post }) => {
       <div className="w-full center gap-10">
         <PinterestShareButton {...config} 
           media={ogImage.url}
-          className=" zoom-box-2 transition-transform"
+          className="hover-box"
         >
           <PinterestIcon size={SIZE} round />
         </PinterestShareButton>
@@ -50,20 +50,20 @@ export const Share: React.VFC<Props> = ({ post }) => {
           via={SITE_NAME}
           related={[SITE_NAME, 'Next.js']}
           hashtags={tags}
-          className=" zoom-box-2 transition-transform"
+          className="hover-box"
         >
           <TwitterIcon size={SIZE} round />
         </TwitterShareButton>
         <FacebookShareButton {...config}
-          className=" zoom-box-2 transition-transform">
+          className="hover-box">
           <FacebookIcon size={SIZE} round />
         </FacebookShareButton>
         <LineShareButton {...config}
-          className=" zoom-box-2 transition-transform">
+          className="hover-box">
           <LineIcon size={SIZE} round />
         </LineShareButton>
         <HatenaShareButton {...config}
-          className=" zoom-box-2 transition-transform"
+          className="hover-box"
         >
           <HatenaIcon size={SIZE} round />
         </HatenaShareButton>

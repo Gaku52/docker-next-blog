@@ -49,6 +49,12 @@
   .zoom-box-2{
     @apply hover:scale-150;
   }
+  .hover-box{
+    @apply hover:brightness-[.80] transition-all;
+  }
+  .hover-box-2{
+    @apply hover:brightness-[4] transition-all;
+  }
   .zoom-box-g{
     @apply group-hover:scale-[1.15] duration-500;
   }

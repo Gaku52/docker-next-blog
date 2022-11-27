@@ -40,7 +40,7 @@ export const TopProfile = () => (
     <div className="flex gap-4">
       {sns.map(({ href, icon, label }) => (
         <Link key={href} href={href} passHref>
-          <a className="text-primary-1 zoom-box-2 transition-transform" aria-label={label}>
+          <a className="text-primary-1 hover-box-2" aria-label={label}>
             {icon}
           </a>
         </Link>

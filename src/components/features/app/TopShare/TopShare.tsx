@@ -10,7 +10,6 @@ import {
   TwitterIcon,
   TwitterShareButton,
 } from 'react-share';
-import { MdShare } from 'react-icons/md';
 import { ROOT_URL, SITE_NAME } from '@/config/app';
 import { PostType } from '@/types/post';
 
@@ -33,7 +32,6 @@ export const TopShare: React.VFC<Props> = ({ post }) => {
   return (
     <div className="select-none vstack gap-3 p-6 bg-primary-2">
       <div className="center gap-2 py-2 px-3 xl:text-base text-xs font-bold text-primary-1 uppercase">
-        <MdShare />
         共有
       </div>
 

@@ -18,7 +18,7 @@ Webブラウザからのリクエストを受けて返すまでの「Webサー�
 [解説サイト様①「Web3層構造とは？メリット、MVCとの違い、AWSで構築するには？」](https://onl.tw/WDryGZa)  
 [解説サイト様②「Web3層アーキテクチャってなに？Alibaba Cloud, AWS, Azure, Google Cloud のWeb3層アーキテクチャを比べてみました」](https://www.softbank.jp/biz/blog/cloud-technology/articles/202206/web-3-tier-architecture/)  
 [解説サイト様③「Webシステムの仕組みをわかりやすく解説！大規模Webシステムで採用されるWeb3層構造とは？」](https://system-kanji.com/posts/web-system-structure)  
-[解説サイト様④「」](url)  
+[解説サイト様④「Web3層アプリケーションとの比較　～サーバーレスアーキテクチャで何が変わるのか～」](https://ecloudp.com/media/report/a77)  
 [解説サイト様⑤「」](url)  
 [解説サイト様⑥「」](url)  
 [解説サイト様⑦「」](url)  

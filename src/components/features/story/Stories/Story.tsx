@@ -23,8 +23,8 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
         </div>
         <div className="m-auto sm:p-3 p-2 sm:h-[8.50rem] h-32 sm:w-full sm:text-xs sm:border-t-4 border-t-2 border-neutral-300 dark:border-neutral-400 gap-2 vstack">
           <Date date={date} />
-          <h3 className="m-auto sm:text-primary-1 sm:text-[13px] text-[12px] sm:font-bold font-bold">{title}</h3>
-          <p className="m-auto text-neutral-700 dark:text-neutral-300 font-normal sm:text-xs text-[10px] line-clamp-2 sm:line-clamp-3">
+          <h3 className="m-auto sm:text-primary-1 sm:text-[13px] text-[10px] sm:font-bold font-bold">{title}</h3>
+          <p className="m-auto text-neutral-700 dark:text-neutral-300 font-normal sm:text-xs text-[8px] line-clamp-2 sm:line-clamp-3">
             {excerpt}
           </p>
         </div>

@@ -20,7 +20,7 @@ Qiitaは、エンジニアに関する知識を記録・共有するためのサ
 [001 MITライセンスとは何かを知りたいとき。「MITライセンスです」](https://qiita.com/suwanishi77/items/82629633c16b086d1cd2)  
 [002 様々なショートカットキーを知りたいとき。「エンジニア向けチートシート集」](https://qiita.com/KNR109/items/a6b3216552bee53b1724)  
 [003 JavaScriptのES2015について知りたいとき。「ES2015(ES6) 入門」](https://qiita.com/soarflat/items/b251caf9cb59b72beb9b)  
-[004 とき。「」](url)  
+[004 よく使う英単語を学習したいとき。「プログラミングでよく使う英単語のまとめ【随時更新】」](https://onl.sc/K4GA6zv)  
 [005 とき。「」](url)  
 [006 とき。「」](url)  
 [007 とき。「」](url)  

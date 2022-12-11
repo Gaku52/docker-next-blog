@@ -2,7 +2,7 @@
 title: '読んだQiita記事一覧'
 excerpt: 'Qiitaを必要に応じて読み、拝見したものを記録していきます。'
 coverImage: '/assets/blog/qiita/qiita.png'
-date: '2022-12-04'
+date: '2022-12-11'
 ogImage:
   url: '/assets/blog/qiita/qiita.png'
 tags:
@@ -23,7 +23,7 @@ Qiitaは、エンジニアに関する知識を記録・共有するためのサ
 [004 よく使う英単語を学習したいとき。「プログラミングでよく使う英単語のまとめ【随時更新】」](https://onl.sc/K4GA6zv)  
 [005 OAuthを学習したいとき。「一番分かりやすい OAuth の説明」](https://qiita.com/TakahikoKawasaki/items/e37caf50776e00e733be)  
 [006 Laravelの基礎学習をしたいとき。「Laravel入門 - 使い方チュートリアル -」](https://qiita.com/sano1202/items/6021856b70e4f8d3dc3d)  
-[007 とき。「」](url)  
+[007 実務に入る前にやっておいた方がいいこと６選とき。「」](https://qiita.com/yukimuraryofu/items/638cb528a4ca2a5c4c90)  
 [008 とき。「」](url)  
 [009 とき。「」](url)  
 [010 とき。「」](url)  

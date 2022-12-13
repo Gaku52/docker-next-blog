@@ -28,7 +28,7 @@ export const DetailedProfile = () => (
       </div>
       <div className="font-semibold">
       ◆バックエンド<br />
-      PHP/Laravel(現在、学習中)<br /><br />
+      ※現在、技術選定中<br /><br />
       </div>
       <div className="font-semibold">
       ◆バージョン管理ツール<br />

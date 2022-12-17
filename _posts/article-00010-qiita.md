@@ -2,7 +2,7 @@
 title: '読んだQiita記事一覧'
 excerpt: 'Qiitaを必要に応じて読み、拝見したものを記録していきます。'
 coverImage: '/assets/blog/qiita/qiita.png'
-date: '2022-12-11'
+date: '2022-12-17'
 ogImage:
   url: '/assets/blog/qiita/qiita.png'
 tags:
@@ -25,7 +25,7 @@ Qiitaは、エンジニアに関する知識を記録・共有するためのサ
 [006 Laravelの基礎学習をしたいとき。「Laravel入門 - 使い方チュートリアル -」](https://qiita.com/sano1202/items/6021856b70e4f8d3dc3d)  
 [007 実務前に勉強した項目を知りたいとき。「実務に入る前にやっておいた方がいいこと６選」](https://qiita.com/yukimuraryofu/items/638cb528a4ca2a5c4c90)  
 [008 SQLの学習をしたいとき。「SQL100本ノックの環境構築と少し実践！」](https://qiita.com/mahiro72/items/f468c0450f4ccecc300a)  
-[009 とき。「」](url)  
+[009 SQLの学習をしたいとき。「【これだけ覚えてたらOK！】SQL構文まとめ」](https://qiita.com/tatsuya4150/items/69c2c9d318e5b93e6ccd)  
 [010 とき。「」](url)  
 <!-- [011 とき。「」](url)  
 [012 とき。「」](url)  

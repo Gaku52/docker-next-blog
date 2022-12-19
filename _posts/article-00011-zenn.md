@@ -18,7 +18,7 @@ Zennはエンジニアのための新しい情報共有コミュニティです�
 ### Zenn記事一覧
 
 [001 Next.jsでECサイト開発したいとき。「Next.jsとStripeではじめるシンプルなECサイト開発ワークショップ」](https://zenn.dev/stripe/books/stripe-nextjs-use-shopping-cart/viewer/step0)  
-[002 とき。「」](url)  
+[002 質問の仕方について知りたいとき。「プログラマーにとって大事な、「質問」に関する記事」](https://zenn.dev/nameless_sn/articles/question_handbook)  
 [003 とき。「」](url)  
 <!-- [004 とき。「」](url)  
 [005 とき。「」](url)  

@@ -26,7 +26,7 @@ Qiitaは、エンジニアに関する知識を記録・共有するためのサ
 [007 実務前に勉強した項目を知りたいとき。「実務に入る前にやっておいた方がいいこと６選」](https://qiita.com/yukimuraryofu/items/638cb528a4ca2a5c4c90)  
 [008 SQLの学習をしたいとき。「SQL100本ノックの環境構築と少し実践！」](https://qiita.com/mahiro72/items/f468c0450f4ccecc300a)  
 [009 SQLの学習をしたいとき。「【これだけ覚えてたらOK！】SQL構文まとめ」](https://qiita.com/tatsuya4150/items/69c2c9d318e5b93e6ccd)  
-[010 とき。「」](url)  
+[010 実務に入ってから苦労することを知りたいとき。「新人エンジニアが実務に入ってから、苦労したこと3つ」](https://qiita.com/matsuken314/items/7e2c8c900c92b22a7507)  
 <!-- [011 とき。「」](url)  
 [012 とき。「」](url)  
 [013 とき。「」](url)  

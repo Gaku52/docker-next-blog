@@ -12,7 +12,7 @@ type Props = {
 
 export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
   return (
-    <div className="vstack gap-4">
+    <div className="vstack gap-4 sm:mx-24">
       <div className="w-full h-64 sm:h-96">
         <Image
           src={coverImage}

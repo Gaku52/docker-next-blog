@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg leading-relaxed mx-32;
+  @apply text-lg leading-relaxed sm:mx-24;
 }
 
 .markdown p,

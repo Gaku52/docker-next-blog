@@ -1,6 +1,6 @@
 ---
 title: 'Ubuntuのデフォルトユーザーの変更方法'
-excerpt: 'WSLでデフォルトユーザーを変更したいとき、スムーズに設定できなかったため記録を残しておきます。'
+excerpt: 'WSLでデフォルトユーザーを変更したいとき、スムーズに設定できなかったため記録します。'
 coverImage: '/assets/blog/Ubuntu/Ubuntu.png'
 date: '2022-11-01'
 ogImage:

@@ -1,6 +1,6 @@
 ---
 title: 'TCP/IPとは？階層モデルで行う学習'
-excerpt: 'アプリケーション,トランスポート,インターネット・リンクの4層で構成される。'
+excerpt: 'アプリケーション,トランスポート,インターネット・リンクの4層で構成されています。'
 coverImage: '/assets/blog/TCPIP/TCPIP.png'
 date: '2022-11-05'
 ogImage:

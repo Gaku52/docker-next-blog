@@ -44,7 +44,7 @@ export const DetailedProfile = () => (
       <div className="font-semibold">
       ◆今後の学習予定<br />
       CI/CDパイプラインの構築<br />
-      Terraformでインフラのコード化<br /><br />
+      Terraformの利用<br /><br />
       </div>
     </p>
     {spreadsheet.map(({ href, icon, label }) => (

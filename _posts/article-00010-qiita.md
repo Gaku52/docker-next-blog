@@ -1,6 +1,6 @@
 ---
 title: '読んだQiita記事一覧'
-excerpt: 'Qiitaを必要に応じて読み、拝見したものを記録していきます。'
+excerpt: 'Qiitaを必要に応じて読み、拝見したものを記録します。'
 coverImage: '/assets/blog/qiita/qiita.png'
 date: '2022-12-17'
 ogImage:

@@ -12,5 +12,5 @@
     "files.trimTrailingWhitespace": false
   },
   "git.ignoreLimitWarning": true,
-  "cSpell.words": ["mapbox", "zustand"]
+  "cSpell.words": ["autoplay", "mapbox", "zustand"]
 }

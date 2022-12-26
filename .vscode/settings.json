@@ -11,6 +11,9 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
+  "markdownlint.config": {
+    "MD033": false
+  },
   "git.ignoreLimitWarning": true,
   "cSpell.words": ["autoplay", "mapbox", "zustand"]
 }

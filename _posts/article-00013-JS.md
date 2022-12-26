@@ -20,7 +20,6 @@ JavaScriptはWEBブラウザだけではなく、Node.jsというサーバー側
 
 フロントエンド開発でJavaScriptが必要な理由を解説！【ヤフー出身エンジニアが教える初心者向けプログラミング講座】
 
-[!['altテキスト'](https://img.youtube.com/vi/pnsieVYy72M/sddefault.jpg)](https://www.youtube.com/watch?v=pnsieVYy72M&list=PLwM1-TnN_NN7-zdRV8YsGUB82VVhfYiWW&index=4)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pnsieVYy72M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### まとめ
-
+### 用語

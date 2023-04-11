@@ -30,6 +30,8 @@ export const getStaticProps = async ({ params }: Params) => {
   };
 };
 
+
+
 export async function getStaticPaths() {
   const pages = Array.from({
     length: getMaxPage(),

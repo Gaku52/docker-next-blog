@@ -2,8 +2,6 @@ backend:
   name: github
   repo: Gaku52/docker-next-blog
   branch: main
-  client_id: 6e3dd2f16dc6e3620f74
-  client_secret: 8a9824eeae83ac60c41c4a8dec789c97aef866ea
 
 media_folder: "public/img/uploads"
 public_folder: "/img/uploads"

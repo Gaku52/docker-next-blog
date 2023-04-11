@@ -14,5 +14,16 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Cover Image", name: "coverImage", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - label: "OG Image"
+        name: "ogImage"
+        widget: "object"
+        fields:
+          - {label: "URL", name: "url", widget: "string"}
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field: {label: "Tag", name: "tag", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}

@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Gaku52/docker-next-blog
+  repo: docker-next-blog
   branch: main
 
 media_folder: "public/img/uploads"

@@ -6,21 +6,42 @@ on:
     types: [update-articles]
 
 jobs:
-  build:
+  fetch-categories:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: '16.8.0'
-          cache: npm
-          
+          node-version: '16.x'
+
+      - name: Fetch Categories
+        run: |
+          npm install axios
+          node fetch-categories.js
+        env:
+          MICRO_CMS_API_KEY: ${{ secrets.MICRO_CMS_API_KEY }}
+          MICRO_CMS_API_BASE_URL: ${{ secrets.MICRO_CMS_API_BASE_URL }}
+
+  update-articles:
+    runs-on: ubuntu-latest
+
+    needs: fetch-categories
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+
       - name: Cache dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v2
         with:
           path: |
             ~/.npm
@@ -28,7 +49,7 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-            
+
       - name: Install dependencies
         run: npm install
 
@@ -52,7 +73,7 @@ jobs:
         env:
           NEXT_PUBLIC_ROOT_URL: ${{ secrets.NEXT_PUBLIC_ROOT_URL }}
           NEXT_PUBLIC_SITE_NAME: ${{ secrets.NEXT_PUBLIC_SITE_NAME }}
-  
+
       - name: Move 404 to root
         run: mv ./out/404/index.html ./out/404.html
 

@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 const yaml = require("js-yaml");
-const { Title } = require("@radix-ui/react-dialog");
 
 const MICRO_CMS_API_KEY = process.env.MICRO_CMS_API_KEY;
 const MICRO_CMS_API_BASE_URL = process.env.MICRO_CMS_API_BASE_URL;
@@ -68,18 +67,18 @@ const generateMarkdown = async (articles) => {
     const filePath = path.join(__dirname, "_posts", `${article.id}.md`);
 
     // Convert the date to a JavaScript Date object
-    const titleObject = new Title(article.title);
+    const titleObject = new title(article.title);
     const dateObject = new Date(article.date);
 
     // Extract the year, month, and day
-    const title = titleObject.getTitle();
+    const title = String(titleObject.getTitle());
     const year = dateObject.getFullYear();
     const month = String(dateObject.getMonth() + 1).padStart(2, "0");
     const day = String(dateObject.getDate()).padStart(2, "0");
 
      // Create the new date format
     const formattedTitle = `${title}`
-     const formattedDate = `${year}-${month}-${day}`;
+    const formattedDate = `${year}-${month}-${day}`;
 
     // Update article tags to use category names
     const tags = article.tags.map(tag => `#${tag}`);

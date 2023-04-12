@@ -31,6 +31,9 @@ jobs:
 
       - name: Update Articles
         run: node update-articles.js
+        env:
+          MICRO_CMS_API_KEY: ${{ secrets.MICRO_CMS_API_KEY }}
+          MICRO_CMS_API_BASE_URL: ${{ secrets.MICRO_CMS_API_BASE_URL }}
 
       - name: Build
         run: npm run build

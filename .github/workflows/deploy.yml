@@ -39,6 +39,7 @@ jobs:
         env:
           MICRO_CMS_API_KEY: ${{ secrets.MICRO_CMS_API_KEY }}
           MICRO_CMS_API_BASE_URL: ${{ secrets.MICRO_CMS_API_BASE_URL }}
+          MICRO_CMS_API_BASE_URL_CATEGORIES: ${{ secrets.MICRO_CMS_API_BASE_URL_CATEGORIES }}
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
 
       - name: Commit and push changes

@@ -13,17 +13,17 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string", default: "''"}
-      - {label: "Excerpt", name: "excerpt", widget: "string", default: "''"}
-      - {label: "Cover Image", name: "coverImage", widget: "string", default: "''"}
+      - {label: "Title", name: "title", widget: "string", hint: "シングルクォートを設定して下さい"}
+      - {label: "Excerpt", name: "excerpt", widget: "string", hint: "Use single quotes for strings."}
+      - {label: "Cover Image", name: "coverImage", widget: "string", hint: "Use single quotes for strings."}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
       - label: "OG Image"
         name: "ogImage"
         widget: "object"
         fields:
-          - {label: "URL", name: "url", widget: "string", default: "''"}
+          - {label: "URL", name: "url", widget: "string", hint: "Use single quotes for strings."}
       - label: "Tags"
         name: "tags"
         widget: "list"
         field: {label: "Tag", name: "tag", widget: "string"}
-      - {label: "Body", name: "body", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}

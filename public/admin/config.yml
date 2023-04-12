@@ -27,4 +27,4 @@ collections:
         name: "tags"
         widget: "list"
         field: {label: "Tag", name: "tag", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "text"}

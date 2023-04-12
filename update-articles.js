@@ -34,6 +34,8 @@ const fetchData = async () => {
       },
     });
 
+    console.log("Data from API:", data); // Add this line
+
     // Fetch category data
     const { data: categoryData } = await axios.get(`${MICRO_CMS_API_BASE_URL_CATEGORIES}`, {
       headers: {
@@ -83,6 +85,7 @@ const generateMarkdown = async (articles) => {
       excerpt: article.excerpt,
       coverImage: `/img/uploads/${article.coverImage.filename}`,
       date: formattedDate,
+      ogImage: `/img/uploads/${article.ogImage.filename}`, // Add this line
       tags, // Updated tags
     };
 
@@ -91,17 +94,26 @@ const generateMarkdown = async (articles) => {
 
     fs.writeFileSync(filePath, markdownContent, "utf-8");
 
-    const imageOutputPath = path.join(
+    const coverImageOutputPath = path.join(
       __dirname,
       "public",
       "img",
       "uploads",
       article.coverImage.filename
     );
+    const ogImageOutputPath = path.join(
+      __dirname,
+      "public",
+      "img",
+      "uploads",
+      article.ogImage.filename
+    );
 
-    await downloadImage(article.coverImage.url, imageOutputPath);
+    await downloadImage(article.coverImage.url, coverImageOutputPath);
+    await downloadImage(article.ogImage.url, ogImageOutputPath); // Add this line
   }
 };
+
 
 (async () => {
   try {

@@ -58,7 +58,7 @@ const generateMarkdown = async (articles) => {
       title: `'${article.title}'`,
       excerpt: `'${article.excerpt}'`,
       coverImage: `'${"/img/uploads/" + article.coverImage.filename}'`,
-      date: `'${formattedDate}'`,
+      date: formattedDate,
       tags: article.tags.map((tag) => `'${tag}'`),
     };
 

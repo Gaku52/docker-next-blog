@@ -55,11 +55,11 @@ const generateMarkdown = async (articles) => {
     const formattedDate = `${year}-${month}-${day}`;
 
     const frontMatter = {
-      title: `'${article.title}'`,
-      excerpt: `'${article.excerpt}'`,
-      coverImage: `'${"/img/uploads/" + article.coverImage.filename}'`,
+      title: article.title,
+      excerpt: article.excerpt,
+      coverImage: `/img/uploads/${article.coverImage.filename}`,
       date: formattedDate,
-      tags: article.tags.map((tag) => `'${tag}'`),
+      tags: article.tags,
     };
 
     const frontMatterString = yaml.dump(frontMatter);

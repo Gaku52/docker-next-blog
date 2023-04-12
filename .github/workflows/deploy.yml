@@ -6,30 +6,8 @@ on:
     types: [update-articles]
 
 jobs:
-  fetch-categories:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-
-      - name: Fetch Categories
-        run: |
-          npm install axios
-          node fetch-categories.js
-        env:
-          MICRO_CMS_API_KEY: ${{ secrets.MICRO_CMS_API_KEY }}
-          MICRO_CMS_API_BASE_URL: ${{ secrets.MICRO_CMS_API_BASE_URL }}
-
   update-articles:
     runs-on: ubuntu-latest
-
-    needs: fetch-categories
 
     steps:
       - name: Checkout
@@ -52,6 +30,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Install Axios and YAML
+        run: npm install axios js-yaml
 
       - name: Update Articles
         run: node update-articles.js

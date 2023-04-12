@@ -43,11 +43,22 @@ const generateMarkdown = async (articles) => {
   for (const article of articles) {
     const filePath = path.join(__dirname, "_posts", `${article.id}.md`);
 
+    // Convert the date to a JavaScript Date object
+    const dateObject = new Date(article.date);
+
+    // Extract the year, month, and day
+    const year = dateObject.getFullYear();
+    const month = String(dateObject.getMonth() + 1).padStart(2, "0");
+    const day = String(dateObject.getDate()).padStart(2, "0");
+
+    // Create the new date format
+    const formattedDate = `${year}-${month}-${day}`;
+
     const frontMatter = {
       title: `'${article.title}'`,
       excerpt: `'${article.excerpt}'`,
       coverImage: `'${"/img/uploads/" + article.coverImage.filename}'`,
-      date: `'${article.date}'`,
+      date: `'${formattedDate}'`,
       tags: article.tags.map((tag) => `'${tag}'`),
     };
 

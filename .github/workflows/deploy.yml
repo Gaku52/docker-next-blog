@@ -1,6 +1,8 @@
 name: Deploy to GitHub Pages
 
-on: [push]
+on:
+  push:
+  repository_dispatch:
 
 jobs:
   build:
@@ -31,10 +33,25 @@ jobs:
 
       - name: Update Articles
         run: node update-articles.js
+        env:
+          MICRO_CMS_API_KEY: ${{ secrets.MICRO_CMS_API_KEY }}
+          MICRO_CMS_API_BASE_URL: ${{ secrets.MICRO_CMS_API_BASE_URL }}
+          WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "Gaku52"
+          git config user.email "gaku.o.engineer@gmail.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update articles"
+          git push
 
       - name: Build
         run: npm run build
-
+        env:
+          NEXT_PUBLIC_ROOT_URL: ${{ secrets.NEXT_PUBLIC_ROOT_URL }}
+          NEXT_PUBLIC_SITE_NAME: ${{ secrets.NEXT_PUBLIC_SITE_NAME }}
+  
       - name: Move 404 to root
         run: mv ./out/404/index.html ./out/404.html
 

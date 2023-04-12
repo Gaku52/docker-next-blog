@@ -76,7 +76,7 @@ const generateMarkdown = async (articles) => {
     const day = String(dateObject.getDate()).padStart(2, "0");
 
      // Create the new date format
-    const formattedTitle = `${title}`
+    const formattedTitle = `'${title}'`
     const formattedDate = `${year}-${month}-${day}`;
 
     // Update article tags to use category names

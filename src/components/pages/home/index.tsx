@@ -27,16 +27,16 @@ export const Home: React.VFC<Props> = ({ posts }) => {
           <>
             <TopShare post=
             {{
-            slug: "''",
-            title: "''",
-            date: "''",
-            coverImage: "''",
-            excerpt: "''",
+            slug: '',
+            title: '',
+            date: '',
+            coverImage: '',
+            excerpt: '',
             ogImage: {
-              url: "''"
+              url: ''
             },
-            content: "''",
-            tags: [""]
+            content: '',
+            tags: []
             }} /><br />
           <br />
             <TopProfile />

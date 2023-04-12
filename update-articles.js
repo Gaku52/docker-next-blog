@@ -47,10 +47,10 @@ const fetchData = async () => {
 
     // Add category names to article tags
     const articles = data.contents.map(article => {
-      const tags = article.tags.map(tag => {
+      const tags = article.tags ? article.tags.map(tag => {
         const category = categories.find(category => category.id === tag);
         return category.name;
-      });
+      }) : [];
 
       return { ...article, tags };
     });

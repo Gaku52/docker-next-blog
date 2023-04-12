@@ -81,11 +81,11 @@ const generateMarkdown = async (articles) => {
     const tags = article.tags.map(tag => `#${tag}`);
 
     const frontMatter = {
-      title: article.title,
-      excerpt: article.excerpt,
-      coverImage: `/img/uploads/${article.coverImage.filename}`,
+      title: `'${article.title}'`,
+      excerpt: `'${article.excerpt}'`,
+      coverImage: `'/img/uploads/${article.coverImage.filename}'`,
       date: formattedDate,
-      ogImage: `/img/uploads/${article.ogImage.filename}`, // Add this line
+      ogImage: `'/img/uploads/${article.ogImage.filename}'`, // Add this line
       tags, // Updated tags
     };
 

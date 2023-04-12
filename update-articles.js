@@ -30,11 +30,31 @@ const fetchData = async () => {
       },
     });
 
-    return data.contents;
+    // Fetch category data
+    const { data: categoryData } = await axios.get(`${MICRO_CMS_API_BASE_URL}/categories`, {
+      headers: {
+        "X-API-KEY": MICRO_CMS_API_KEY,
+      },
+    });
+
+    const categories = categoryData.contents;
+
+    // Add category names to article tags
+    const articles = data.contents.map(article => {
+      const tags = article.tags.map(tag => {
+        const category = categories.find(category => category.id === tag);
+        return category.name;
+      });
+
+      return { ...article, tags };
+    });
+
+    return articles;
   } catch (error) {
     console.error(error);
   }
 };
+
 
 const generateMarkdown = async (articles) => {
   for (const article of articles) {
@@ -51,12 +71,15 @@ const generateMarkdown = async (articles) => {
     // Create the new date format
     const formattedDate = `${year}-${month}-${day}`;
 
+    // Update article tags to use category names
+    const tags = article.tags.map(tag => `#${tag}`);
+
     const frontMatter = {
       title: article.title,
       excerpt: article.excerpt,
       coverImage: `/img/uploads/${article.coverImage.filename}`,
       date: formattedDate,
-      tags: article.tags,
+      tags, // Updated tags
     };
 
     const frontMatterString = yaml.dump(frontMatter);

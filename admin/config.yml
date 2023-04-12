@@ -13,16 +13,15 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string", default: "''"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string", default: "''"}
-      - {label: "Cover Image", name: "coverImage", widget: "string", default: "''"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Title", name: "title", widget: "string", default: ''}
+      - {label: "Excerpt", name: "excerpt", widget: "string", default: ''}
+      - {label: "Cover Image", name: "coverImage", widget: "string", default: ''}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: 'YYYY-MM-DD'}
       - label: "OG Image"
         name: "ogImage"
         widget: "object"
         fields:
-          - {label: "URL", name: "url", widget: "string", default: "''"}
+          - {label: "URL", name: "url", widget: "string", default: ''}
       - label: "Tags"
         name: "tags"
         widget: "list"

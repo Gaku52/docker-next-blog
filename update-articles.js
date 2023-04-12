@@ -67,11 +67,11 @@ const generateMarkdown = async (articles) => {
     const filePath = path.join(__dirname, "_posts", `${article.id}.md`);
 
     // Convert the date to a JavaScript Date object
-    const titleObject = new title(article.title);
+    const titleString = article.title;
     const dateObject = new Date(article.date);
 
     // Extract the year, month, and day
-    const title = String(titleObject.getTitle());
+    const title = String(titleString.getTitle());
     const year = dateObject.getFullYear();
     const month = String(dateObject.getMonth() + 1).padStart(2, "0");
     const day = String(dateObject.getDate()).padStart(2, "0");

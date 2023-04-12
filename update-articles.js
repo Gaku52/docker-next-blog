@@ -70,20 +70,18 @@ const generateMarkdown = async (articles) => {
     const dateObject = new Date(article.date);
 
     // Extract the year, month, and day
-    const title = String(article.title);
     const year = dateObject.getFullYear();
     const month = String(dateObject.getMonth() + 1).padStart(2, "0");
     const day = String(dateObject.getDate()).padStart(2, "0");
 
      // Create the new date format
-    const formattedTitle = `'${title}'`
     const formattedDate = `${year}-${month}-${day}`;
 
     // Update article tags to use category names
     const tags = article.tags.map(tag => `#${tag}`);
 
     const frontMatter = {
-      title: formattedTitle,
+      title: `"${article.title}"`,
       excerpt: `${article.excerpt}`,
       coverImage: `/img/uploads/${article.coverImage.filename}`,
       date: formattedDate,

@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
   repository_dispatch:
+    types: [update-articles]
 
 jobs:
   build:

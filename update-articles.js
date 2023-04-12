@@ -5,13 +5,17 @@ const yaml = require("js-yaml");
 
 const MICRO_CMS_API_KEY = process.env.MICRO_CMS_API_KEY;
 const MICRO_CMS_API_BASE_URL = process.env.MICRO_CMS_API_BASE_URL;
+const MICRO_CMS_API_BASE_URL_CATEGORIES = process.env.MICRO_CMS_API_BASE_URL_CATEGORIES;
 
 const downloadImage = async (url, outputPath) => {
   const response = await axios({
     method: "GET",
     url: url,
     responseType: "stream",
-  });
+  }).catch((error) => {
+    console.error(`Error downloading image from URL: ${url}`);
+    console.error(error);
+});
 
   const writer = fs.createWriteStream(outputPath);
   response.data.pipe(writer);
@@ -24,14 +28,14 @@ const downloadImage = async (url, outputPath) => {
 
 const fetchData = async () => {
   try {
-    const { data } = await axios.get(`${MICRO_CMS_API_BASE_URL}/posts`, {
+    const { data } = await axios.get(`${MICRO_CMS_API_BASE_URL}`, {
       headers: {
         "X-API-KEY": MICRO_CMS_API_KEY,
       },
     });
 
     // Fetch category data
-    const { data: categoryData } = await axios.get(`${MICRO_CMS_API_BASE_URL}/categories`, {
+    const { data: categoryData } = await axios.get(`${MICRO_CMS_API_BASE_URL_CATEGORIES}`, {
       headers: {
         "X-API-KEY": MICRO_CMS_API_KEY,
       },

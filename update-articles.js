@@ -83,26 +83,22 @@ const generateMarkdown = async (articles) => {
     fs.writeFileSync(filePath, markdownContent, "utf-8");
 
     if (article.coverImage) {
-      const coverImageFileName = path.basename(urlModule.parse(article.coverImage.url).pathname);
       const coverImageOutputPath = path.join(
         __dirname,
         "public",
         "img",
         "uploads",
-        coverImageFileName
       );
 
       await downloadImage(article.coverImage.url, coverImageOutputPath);
     }
 
     if (article.ogImage) {
-      const ogImageFileName = path.basename(urlModule.parse(article.ogImage.url).pathname);
       const ogImageOutputPath = path.join(
         __dirname,
         "public",
         "img",
         "uploads",
-        ogImageFileName
       );
 
       await downloadImage(article.ogImage.url, ogImageOutputPath);

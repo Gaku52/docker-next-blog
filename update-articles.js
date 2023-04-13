@@ -79,7 +79,7 @@ const generateMarkdown = async (articles) => {
     }
 
     const frontMatterString = yaml.dump(frontMatter, { lineWidth: 1000, forceQuotes: true });
-    const markdownContent = `---\n${frontMatterString}---\n\n${article.content}`;
+    const markdownContent = `---\n${frontMatterString}---\n\n${article.content.replace(/<\/?p>/gi, " ")}\n`
 
     fs.writeFileSync(filePath, markdownContent, "utf-8");
 

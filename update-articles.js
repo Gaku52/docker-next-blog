@@ -49,6 +49,7 @@ const fetchData = async () => {
     const categories = categoryData.contents;
 
     const articles = data.contents.map(article => {
+      console.log("Tags data:", article.tags); // Add this line to display tags data in the console
       console.log("coverImage object:", article.coverImage);
       console.log("ogImage object:", article.ogImage);
 
@@ -81,9 +82,9 @@ const generateMarkdown = async (articles) => {
     const frontMatter = {
       title: `"${article.title}"`,
       excerpt: `"${article.excerpt}"`,
-      coverImage: article.coverImage ? `"${article.coverImage.url}"` : undefined,
+      coverImage: article.coverImage ? `'${article.coverImage.url}'` : undefined,
       date: formattedDate,
-      ogImage: article.ogImage ? `"${article.ogImage.url}"` : undefined,
+      ogImage: article.ogImage ? `'${article.ogImage.url}'` : undefined,
       tags,
     };
 

@@ -86,9 +86,9 @@ const generateMarkdown = async (articles) => {
     const frontMatter = {
       title: `"${article.title}"`,
       excerpt: `"${article.excerpt}"`,
-      coverImage: article.coverImage ? `"/img/uploads/${article.coverImage.filename}"` : undefined,
+      coverImage: article.coverImage ? `"${article.coverImage.url}"` : undefined,
       date: formattedDate,
-      ogImage: article.ogImage ? `"/img/uploads/${article.ogImage.filename}"` : undefined,
+      ogImage: article.ogImage ? `"${article.ogImage.url}"` : undefined,
       tags, // Updated tags
     };
 

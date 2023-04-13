@@ -83,7 +83,7 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '{@/libs/**,@/features/**,@/app',
+            pattern: '{@/libs/**,@/features/**,@/app**}',
             group: 'internal',
             position: 'before',
           },
@@ -96,6 +96,12 @@ module.exports = {
             pattern: './**.module.css',
             group: 'index',
             position: 'after',
+          },
+          // 追加
+          {
+            pattern: '../types/cell',
+            group: 'internal',
+            position: 'before',
           },
         ],
       },

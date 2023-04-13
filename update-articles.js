@@ -55,10 +55,11 @@ const fetchData = async () => {
   }
 };
 
-const getNextFileName = (dirPath) => {
+const getNextFileName = (dirPath, title) => {
+  const slug = title.replace(/[^a-zA-Z0-9-]/g, '-').replace(/--+/g, '-').toLowerCase();
   const fileNames = fs.readdirSync(dirPath).map(fileName => parseInt(fileName.slice(0, 5)));
   const maxFileName = Math.max(...fileNames);
-  return `${String(maxFileName + 1).padStart(5, '0')}`;
+  return `article-${String(maxFileName + 1).padStart(5, '0')}-${slug}.md`;
 };
 
 const generateMarkdown = async (articles) => {

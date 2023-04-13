@@ -8,6 +8,7 @@ ogImage: >-
   'https://images.microcms-assets.io/assets/94a36a630913454099c7a6368ebebeeb/5dc1464e86fb4f94a3fc53662eed5fe5/blog-template.png'
 tags:
   - '''学習'''
+  - '''Markdown'''
 ---
 
 <p>CMSを導入しました。本日はmicroCMSについての記事になります。</p>

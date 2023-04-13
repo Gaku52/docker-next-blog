@@ -67,18 +67,18 @@ const generateMarkdown = async (articles) => {
     const formattedDate = `${year}-${month}-${day}`;
 
     const frontMatter = {
-      title: `'${article.title}'`,
-      excerpt: `'${article.excerpt}'`,
-      coverImage: article.coverImage ? `'${article.coverImage.url}'` : undefined,
+      title: `${article.title}`,
+      excerpt: `${article.excerpt}`,
+      coverImage: article.coverImage ? `${article.coverImage.url}` : undefined,
       date: formattedDate,
-      ogImage: article.ogImage ? `'${article.ogImage.url}'` : undefined,
+      ogImage: article.ogImage ? `${article.ogImage.url}` : undefined,
     };
 
     if (article.tags.length > 0) {
-      frontMatter.tags = article.tags.map(tag => `'${tag}'`.replace("'''", "'"));
+      frontMatter.tags = article.tags.map(tag => `${tag}`);
     }
 
-    const frontMatterString = yaml.dump(frontMatter, { lineWidth: 1000 });
+    const frontMatterString = yaml.dump(frontMatter, { lineWidth: 1000, forceQuotes: true });
     const markdownContent = `---\n${frontMatterString}---\n\n${article.content}`;
 
     fs.writeFileSync(filePath, markdownContent, "utf-8");

@@ -31,8 +31,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Axios, YAML, and Cheerio
-        run: npm install axios js-yaml cheerio
+      - name: Install Axios and YAML
+        run: npm install axios js-yaml
 
       - name: Update Articles
         run: node update-articles.js

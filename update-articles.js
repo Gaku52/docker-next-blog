@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const urlModule = require("url");
 const axios = require("axios");
 const yaml = require("js-yaml");
 
@@ -15,9 +16,12 @@ const downloadImage = async (url, outputPath) => {
   }).catch((error) => {
     console.error(`Error downloading image from URL: ${url}`);
     console.error(error);
-});
+  });
 
-  const writer = fs.createWriteStream(outputPath);
+  const parsedUrl = urlModule.parse(url);
+  const fileName = path.basename(parsedUrl.pathname);
+  const writer = fs.createWriteStream(path.join(outputPath, fileName));
+
   response.data.pipe(writer);
 
   return new Promise((resolve, reject) => {
@@ -34,9 +38,8 @@ const fetchData = async () => {
       },
     });
 
-    console.log("Data from API:", data); // Add this line
+    console.log("Data from API:", data);
 
-    // Fetch category data
     const { data: categoryData } = await axios.get(`${MICRO_CMS_API_BASE_URL_CATEGORIES}`, {
       headers: {
         "X-API-KEY": MICRO_CMS_API_KEY,
@@ -45,7 +48,6 @@ const fetchData = async () => {
 
     const categories = categoryData.contents;
 
-    // Add category names to article tags
     const articles = data.contents.map(article => {
       console.log("coverImage object:", article.coverImage);
       console.log("ogImage object:", article.ogImage);
@@ -64,23 +66,16 @@ const fetchData = async () => {
   }
 };
 
-
 const generateMarkdown = async (articles) => {
   for (const article of articles) {
     const filePath = path.join(__dirname, "_posts", `${article.id}.md`);
 
-    // Convert the date to a JavaScript Date object
     const dateObject = new Date(article.date);
-
-    // Extract the year, month, and day
     const year = dateObject.getFullYear();
     const month = String(dateObject.getMonth() + 1).padStart(2, "0");
     const day = String(dateObject.getDate()).padStart(2, "0");
-
-     // Create the new date format
     const formattedDate = `${year}-${month}-${day}`;
 
-    // Update article tags to use category names
     const tags = article.tags.map(tag => `#${tag}`);
 
     const frontMatter = {
@@ -89,7 +84,7 @@ const generateMarkdown = async (articles) => {
       coverImage: article.coverImage ? `"${article.coverImage.url}"` : undefined,
       date: formattedDate,
       ogImage: article.ogImage ? `"${article.ogImage.url}"` : undefined,
-      tags, // Updated tags
+      tags,
     };
 
     const frontMatterString = yaml.dump(frontMatter);
@@ -102,8 +97,7 @@ const generateMarkdown = async (articles) => {
         __dirname,
         "public",
         "img",
-        "uploads",
-        article.coverImage.filename
+        "uploads"
       );
 
       await downloadImage(article.coverImage.url, coverImageOutputPath);
@@ -114,8 +108,7 @@ const generateMarkdown = async (articles) => {
         __dirname,
         "public",
         "img",
-        "uploads",
-        article.ogImage.filename
+        "uploads"
       );
 
       await downloadImage(article.ogImage.url, ogImageOutputPath);

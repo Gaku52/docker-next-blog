@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
+const cheerio = require("cheerio");
 const yaml = require("js-yaml");
 
 const MICRO_CMS_API_KEY = process.env.MICRO_CMS_API_KEY;
@@ -15,7 +16,7 @@ const downloadImage = async (url, outputPath) => {
   }).catch((error) => {
     console.error(`Error downloading image from URL: ${url}`);
     console.error(error);
-});
+  });
 
   const writer = fs.createWriteStream(outputPath);
   response.data.pipe(writer);
@@ -33,8 +34,6 @@ const fetchData = async () => {
         "X-API-KEY": MICRO_CMS_API_KEY,
       },
     });
-
-    console.log("Data from API:", data); // Add this line
 
     // Fetch category data
     const { data: categoryData } = await axios.get(`${MICRO_CMS_API_BASE_URL_CATEGORIES}`, {
@@ -61,7 +60,6 @@ const fetchData = async () => {
   }
 };
 
-
 const generateMarkdown = async (articles) => {
   for (const article of articles) {
     const filePath = path.join(__dirname, "_posts", `${article.id}.md`);
@@ -74,25 +72,42 @@ const generateMarkdown = async (articles) => {
     const month = String(dateObject.getMonth() + 1).padStart(2, "0");
     const day = String(dateObject.getDate()).padStart(2, "0");
 
-     // Create the new date format
+    // Create the new date format
     const formattedDate = `${year}-${month}-${day}`;
 
     // Update article tags to use category names
     const tags = article.tags.map(tag => `#${tag}`);
 
+        // Extract the image URL from the content
+    const $ = cheerio.load(article.content);
+    const contentImageUrl = $("img").attr("src");
+
+    if (contentImageUrl) {
+      // Download the content image
+      const imageName = path.basename(contentImageUrl);
+      const contentImageOutputPath = path.join(__dirname, "public", "img", "uploads", imageName);
+      await downloadImage(contentImageUrl, contentImageOutputPath);
+
+      // Add the downloaded image filename to the frontMatter
+      article.contentImage = {
+        filename: imageName,
+      };
+    }
+
     const frontMatter = {
-      title: `'${article.title}'`,
-      excerpt: `'${article.excerpt}'`,
-      coverImage: article.coverImage ? `'/img/uploads/${article.coverImage.filename}'` : undefined,
+      title: `"${article.title}"`,
+      excerpt: `"${article.excerpt}"`,
+      coverImage: article.coverImage ? `"/img/uploads/${article.coverImage.filename}"` : undefined,
+      contentImage: article.contentImage ? `"/img/uploads/${article.contentImage.filename}"` : undefined,
       date: formattedDate,
-      ogImage: article.ogImage ? `'/img/uploads/${article.ogImage.filename}'` : undefined,
+      ogImage: article.ogImage ? `"/img/uploads/${article.ogImage.filename}"` : undefined,
       tags, // Updated tags
     };
 
     const frontMatterString = yaml.dump(frontMatter);
     const markdownContent = `---\n${frontMatterString}---\n\n${article.content}`;
 
-    fs.writeFileSync(filePath, markdownContent, "utf-8");
+fs.writeFileSync(filePath, markdownContent, "utf-8");
 
     if (article.coverImage) {
       const coverImageOutputPath = path.join(
@@ -129,3 +144,4 @@ const generateMarkdown = async (articles) => {
     console.error(error);
   }
 })();
+

@@ -120,11 +120,15 @@ const generateMarkdown = async (articles) => {
 };
 
 const getNewArticleFileName = (fileNames) => {
-  const currentIds = fileNames.map((fileName) => parseInt(fileName.slice(8, 13), 10));
-  const maxId = Math.max(...currentIds);
+  const maxId = fileNames.reduce((max, fileName) => {
+    const id = parseInt(fileName.split("-")[0], 10);
+    return id > max ? id : max;
+  }, 0);
+
   const newId = maxId + 1;
-  return `article-${newId.toString().padStart(5, "0")}.md`;
+  return `${newId.toString().padStart(4, "0")}-new-article.md`;
 };
+
 
 (async () => {
   try {

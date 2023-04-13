@@ -57,7 +57,15 @@ const fetchData = async () => {
 
 const generateMarkdown = async (articles) => {
   for (const article of articles) {
-    const filePath = path.join(__dirname, "_posts", `${article.id}.md`);
+    let filePath;
+    if (article.new) {
+      const postsDir = path.join(__dirname, "_posts");
+      const fileNames = fs.readdirSync(postsDir);
+      const newArticleFileName = getNewArticleFileName(fileNames);
+      filePath = path.join(__dirname, "_posts", newArticleFileName);
+    } else {
+      filePath = path.join(__dirname, "_posts", `${article.id}.md`);
+    }
 
     const dateObject = new Date(article.date);
     const year = dateObject.getFullYear();
@@ -110,10 +118,31 @@ const generateMarkdown = async (articles) => {
   }
 };
 
+const getNewArticleFileName = (fileNames) => {
+  const currentIds = fileNames.map((fileName) => parseInt(fileName.slice(8, 13), 10));
+  const maxId = Math.max(...currentIds);
+  const newId = maxId + 1;
+  return `article-${newId.toString().padStart(5, "0")}.md`;
+};
+
 (async () => {
   try {
     const articles = await fetchData();
+
+    // 新規記事を作成
+    const newArticle = {
+      id: "",
+      title: "",
+      excerpt: "",
+      content: "",
+      date: new Date().toISOString(),
+      tags: [],
+      new: true, // 新規記事を示すフラグ
+    };
+    articles.push(newArticle);
+
     await generateMarkdown(articles);
+    console.log(`New article created: ${newArticle.id}.md`);
     console.log("Articles updated successfully");
   } catch (error) {
     console.error(error);

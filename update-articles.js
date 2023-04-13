@@ -83,7 +83,7 @@ const generateMarkdown = async (articles) => {
     const formattedDate = `${year}-${month}-${day}`;
 
     // Update article tags to use category names
-    const tags = article.tags.map(tag => `'${tag}'`);
+    const tags = article.tags.map(tag => `'${tag.name}'`);
 
     const frontMatter = {
       title: `'${article.title}'`,

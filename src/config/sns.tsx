@@ -17,9 +17,9 @@ export const sns = [
     icon: <SiTwitter size={20} />,
     label: 'Twitter',
   },
-  {
-    href: process.env.MICRO_CMS_API_BASE_URL,
-    icon: <RiAdminFill size={20} />,
-    label: 'Admin',
-  },
+  // {
+  //   href: process.env.MICRO_CMS_API_BASE_URL,
+  //   icon: <RiAdminFill size={20} />,
+  //   label: 'Admin',
+  // },
 ];

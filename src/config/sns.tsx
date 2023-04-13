@@ -18,7 +18,7 @@ export const sns = [
     label: 'Twitter',
   },
   {
-    href: 'https://www.gbyme.com/admin',
+    href: 'MICRO_CMS_API_BASE_URL',
     icon: <RiAdminFill size={20} />,
     label: 'Admin',
   },

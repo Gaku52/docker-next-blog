@@ -2,7 +2,7 @@
 title: 'WEB3層構造とは？'
 excerpt: 'Webブラウザからのリクエストを受けて返すまでの「Webサーバー、APサーバー、DBサーバー」で編成されるWebアプリケーションの構造化の原則を定義しています。'
 coverImage: '/assets/blog/backend/backend03.png'
-date: '2022-11-25-23-00'
+date: '2022-11-25T23:00'
 ogImage:
   url: '/assets/blog/backend/backend03.png'
 tags:

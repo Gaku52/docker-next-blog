@@ -2,7 +2,7 @@
 title: 'GitHubに接続するhttpsとsshの方式について'
 excerpt: 'GitHubのリポートリポジトリと接続する際の方式についての調査を行います。'
 coverImage: '/assets/blog/github/github.png'
-date: '2022-11-04-23-00'
+date: '2022-11-04T23:00'
 ogImage:
   url: '/assets/blog/github/github.png'
 tags:

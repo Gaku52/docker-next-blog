@@ -66,18 +66,19 @@ const generateMarkdown = async (articles) => {
 
     const formattedDate = `${year}-${month}-${day}`;
 
-    const tags = article.tags.map(tag => `'${tag}'`);
-
     const frontMatter = {
       title: `'${article.title}'`,
       excerpt: `'${article.excerpt}'`,
       coverImage: article.coverImage ? `'${article.coverImage.url}'` : undefined,
       date: formattedDate,
       ogImage: article.ogImage ? `'${article.ogImage.url}'` : undefined,
-      tags,
     };
 
-    const frontMatterString = yaml.dump(frontMatter);
+    if (article.tags.length > 0) {
+      frontMatter.tags = article.tags.map(tag => `'${tag}'`);
+    }
+
+    const frontMatterString = yaml.safeDump(frontMatter);
     const markdownContent = `---\n${frontMatterString}---\n\n${article.content}`;
 
     fs.writeFileSync(filePath, markdownContent, "utf-8");
@@ -105,6 +106,7 @@ const generateMarkdown = async (articles) => {
     }
   }
 };
+
 
 (async () => {
   try {

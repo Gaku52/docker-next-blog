@@ -63,6 +63,7 @@ const generateMarkdown = async (articles) => {
       const fileNames = fs.readdirSync(postsDir);
       const newArticleFileName = getNewArticleFileName(fileNames);
       filePath = path.join(__dirname, "_posts", newArticleFileName);
+      article.id = newArticleFileName.slice(0, -3); // 新しい記事のIDを設定
     } else {
       filePath = path.join(__dirname, "_posts", `${article.id}.md`);
     }

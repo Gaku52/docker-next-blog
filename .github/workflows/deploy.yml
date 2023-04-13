@@ -47,9 +47,8 @@ jobs:
           git config user.name "Gaku52"
           git config user.email "gaku.o.engineer@gmail.com"
           git add .
-          git commit -m "update articles" --author="Gaku52 <gaku.o.engineer@gmail.com>"
-          git push origin HEAD
-
+          git diff-index --quiet HEAD || git commit -m "update articles" --author="Gaku52 <gaku.o.engineer@gmail.com>" && git push origin HEAD || true
+          
       - name: Build
         run: npm run build
         env:

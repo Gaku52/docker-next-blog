@@ -71,7 +71,7 @@ const generateMarkdown = async (articles) => {
       excerpt: `${article.excerpt}`,
       coverImage: article.coverImage ? `${article.coverImage.url}` : undefined,
       date: formattedDate,
-      ogImage: article.ogImage ? `${article.ogImage.url}` : undefined,
+      ogImage: article.ogImage ? { url: `${article.ogImage.url}` } : undefined,
     };
 
     if (article.tags.length > 0) {

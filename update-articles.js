@@ -67,11 +67,11 @@ const generateMarkdown = async (articles) => {
     const formattedDate = `${year}-${month}-${day}`;
 
     const frontMatter = {
+      title: `${article.title}`,
+      excerpt: `${article.excerpt}`,
       coverImage: article.coverImage ? `/img/uploads/${path.basename(article.coverImage.url)}` : undefined,
       date: formattedDate,
       ogImage: article.ogImage ? { url: `/img/uploads/${path.basename(article.ogImage.url)}` } : undefined,
-      date: formattedDate,
-      ogImage: article.ogImage ? { url: `${article.ogImage.url}` } : undefined,
     };
 
     if (article.tags.length > 0) {

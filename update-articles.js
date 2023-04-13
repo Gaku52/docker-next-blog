@@ -55,18 +55,18 @@ const fetchData = async () => {
   }
 };
 
+const getNextFileName = (dirPath) => {
+  const fileNames = fs.readdirSync(dirPath).map(fileName => parseInt(fileName.slice(0, 5)));
+  const maxFileName = Math.max(...fileNames);
+  return `${String(maxFileName + 1).padStart(5, '0')}`;
+};
+
 const generateMarkdown = async (articles) => {
+  const postDirPath = path.join(__dirname, '_posts');
+
   for (const article of articles) {
-    let filePath;
-    if (article.new) {
-      const postsDir = path.join(__dirname, "_posts");
-      const fileNames = fs.readdirSync(postsDir);
-      const newArticleFileName = getNewArticleFileName(fileNames);
-      filePath = path.join(__dirname, "_posts", newArticleFileName);
-      article.id = newArticleFileName.slice(0, -3); // 新しい記事のIDを設定
-    } else {
-      filePath = path.join(__dirname, "_posts", `${article.id}.md`);
-    }
+    const fileName = `${getNextFileName(postDirPath)}-${article.title.replace(/ /g, '-')}.md`;
+    const filePath = path.join(postDirPath, fileName);
 
     const dateObject = new Date(article.date);
     const year = dateObject.getFullYear();
@@ -119,35 +119,10 @@ const generateMarkdown = async (articles) => {
   }
 };
 
-const getNewArticleFileName = (fileNames) => {
-  const maxId = fileNames.reduce((max, fileName) => {
-    const id = parseInt(fileName.split("-")[0], 10);
-    return id > max ? id : max;
-  }, 0);
-
-  const newId = maxId + 1;
-  return `${newId.toString().padStart(4, "0")}-new-article.md`;
-};
-
-
 (async () => {
   try {
     const articles = await fetchData();
-
-    // 新規記事を作成
-    const newArticle = {
-      id: "",
-      title: "",
-      excerpt: "",
-      content: "",
-      date: new Date().toISOString(),
-      tags: [],
-      new: true, // 新規記事を示すフラグ
-    };
-    articles.push(newArticle);
-
     await generateMarkdown(articles);
-    console.log(`New article created: ${newArticle.id}.md`);
     console.log("Articles updated successfully");
   } catch (error) {
     console.error(error);

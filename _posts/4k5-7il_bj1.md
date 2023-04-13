@@ -1,5 +1,5 @@
 ---
-title: 'article-00015は検知可能か？'
+title: 'microCMSの記事は検知可能か？'
 excerpt: '2つ目ののmicroCMSです。'
 coverImage: '/img/uploads/microCMS.png'
 date: '2023-04-12'

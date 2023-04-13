@@ -78,7 +78,7 @@ const generateMarkdown = async (articles) => {
       frontMatter.tags = article.tags.map(tag => `'${tag}'`);
     }
 
-    const frontMatterString = yaml.safeDump(frontMatter);
+    const frontMatterString = yaml.dump(frontMatter, { lineWidth: 1000 });
     const markdownContent = `---\n${frontMatterString}---\n\n${article.content}`;
 
     fs.writeFileSync(filePath, markdownContent, "utf-8");
@@ -106,7 +106,6 @@ const generateMarkdown = async (articles) => {
     }
   }
 };
-
 
 (async () => {
   try {

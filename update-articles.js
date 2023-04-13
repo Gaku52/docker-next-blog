@@ -55,24 +55,18 @@ const fetchData = async () => {
   }
 };
 
-
 const generateMarkdown = async (articles) => {
   for (const article of articles) {
     const filePath = path.join(__dirname, "_posts", `${article.id}.md`);
 
-    // Convert the date to a JavaScript Date object
     const dateObject = new Date(article.date);
-
-    // Extract the year, month, and day
     const year = dateObject.getFullYear();
     const month = String(dateObject.getMonth() + 1).padStart(2, "0");
     const day = String(dateObject.getDate()).padStart(2, "0");
 
-    // Create the new date format
     const formattedDate = `${year}-${month}-${day}`;
 
-    // Update article tags to use category names
-    const tags = article.tags.map(tag => `'${tag.name}'`);
+    const tags = article.tags.map(tag => `'${tag}'`);
 
     const frontMatter = {
       title: `'${article.title}'`,
@@ -89,31 +83,32 @@ const generateMarkdown = async (articles) => {
     fs.writeFileSync(filePath, markdownContent, "utf-8");
 
     if (article.coverImage) {
+      const coverImageFileName = path.basename(urlModule.parse(article.coverImage.url).pathname);
       const coverImageOutputPath = path.join(
         __dirname,
         "public",
         "img",
         "uploads",
-        article.coverImage.filename
+        coverImageFileName
       );
 
       await downloadImage(article.coverImage.url, coverImageOutputPath);
     }
 
     if (article.ogImage) {
+      const ogImageFileName = path.basename(urlModule.parse(article.ogImage.url).pathname);
       const ogImageOutputPath = path.join(
         __dirname,
         "public",
         "img",
         "uploads",
-        article.ogImage.filename
+        ogImageFileName
       );
 
       await downloadImage(article.ogImage.url, ogImageOutputPath);
     }
   }
 };
-
 
 (async () => {
   try {

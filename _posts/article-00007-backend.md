@@ -2,7 +2,7 @@
 title: 'WEBサーバとは？'
 excerpt: 'apacheとnginxの違いを調査し、技術選定理由とバックエンドのチューニングのための知識をつけます。'
 coverImage: '/assets/blog/backend/backend.png'
-date: '2022-11-22-23:00'
+date: '2022-11-22-23-00'
 ogImage:
   url: '/assets/blog/backend/backend.png'
 tags:

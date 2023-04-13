@@ -9,4 +9,4 @@ tags:
   - 'Markdown'
 ---
 
-<p>CMSを導入しました。本日はmicroCMSについての記事になります。</p>
+ CMSを導入しました。本日はmicroCMSについての記事になります。 

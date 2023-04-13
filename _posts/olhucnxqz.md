@@ -8,4 +8,4 @@ tags:
   - '学習'
 ---
 
-<p><span style="font-size: 2.5em">テスト</span><br>記事を作成するためのテストです。いかがでしょうか？</p>
+ <span style="font-size: 2.5em">テスト</span><br>記事を作成するためのテストです。いかがでしょうか？ 

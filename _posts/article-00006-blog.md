@@ -2,7 +2,7 @@
 title: 'WEBアプリ作成計画'
 excerpt: 'フロントエンド,バックエント,インフラやDevOpsなどそれぞれの学習方針を明確にし、今後作成するポートフォリオの計画を立てます。'
 coverImage: '/assets/blog/study-photo/study-01.jpg'
-date: '2022-11-18'
+date: '2022-11-18-23:00'
 ogImage:
   url: '/assets/blog/study-photo/study-01.jpg'
 tags:

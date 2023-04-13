@@ -18,7 +18,7 @@ export const sns = [
     label: 'Twitter',
   },
   {
-    href: 'MICRO_CMS_API_BASE_URL',
+    href: process.env.MICRO_CMS_API_BASE_URL,
     icon: <RiAdminFill size={20} />,
     label: 'Admin',
   },

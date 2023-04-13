@@ -81,10 +81,11 @@ const generateMarkdown = async (articles) => {
     const tags = article.tags.map(tag => `#${tag}`);
 
     const frontMatter = {
-      title: `"${article.title}"`,
-      excerpt: `${article.excerpt}`,
-      coverImage: `/img/uploads/${article.coverImage.filename}`,
+      title: `'${article.title}'`,
+      excerpt: `'${article.excerpt}'`,
+      coverImage: article.coverImage ? `'/img/uploads/${article.coverImage.filename}'` : undefined,
       date: formattedDate,
+      ogImage: article.ogImage ? `'/img/uploads/${article.ogImage.filename}'` : undefined,
       tags, // Updated tags
     };
 
@@ -93,26 +94,31 @@ const generateMarkdown = async (articles) => {
 
     fs.writeFileSync(filePath, markdownContent, "utf-8");
 
-    const coverImageOutputPath = path.join(
-      __dirname,
-      "public",
-      "img",
-      "uploads",
-      article.coverImage.filename
-    );
-    const ogImageOutputPath = path.join(
-      __dirname,
-      "public",
-      "img",
-      "uploads",
-      article.ogImage.filename
-    );
+    if (article.coverImage) {
+      const coverImageOutputPath = path.join(
+        __dirname,
+        "public",
+        "img",
+        "uploads",
+        article.coverImage.filename
+      );
 
-    await downloadImage(article.coverImage.url, coverImageOutputPath);
-    await downloadImage(article.ogImage.url, ogImageOutputPath); // Add this line
+      await downloadImage(article.coverImage.url, coverImageOutputPath);
+    }
+
+    if (article.ogImage) {
+      const ogImageOutputPath = path.join(
+        __dirname,
+        "public",
+        "img",
+        "uploads",
+        article.ogImage.filename
+      );
+
+      await downloadImage(article.ogImage.url, ogImageOutputPath);
+    }
   }
 };
-
 
 (async () => {
   try {

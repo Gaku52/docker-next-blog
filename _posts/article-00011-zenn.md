@@ -2,7 +2,7 @@
 title: '読んだZenn記事一覧'
 excerpt: 'Zennを必要に応じて読み、拝見したものを記録します。'
 coverImage: '/assets/blog/zenn/zenn.png'
-date: '2022-12-12T23:00'
+date: '2022-12-12T23:00:00'
 ogImage:
   url: '/assets/blog/zenn/zenn.png'
 tags:

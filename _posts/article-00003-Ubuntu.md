@@ -2,7 +2,7 @@
 title: 'WSL＋Docker環境でコード変更時にHOT Reloadが遅い解決法'
 excerpt: 'WSL2でWEBアプリ開発時において、HOTリロードが遅いときの状況と原因について記します。'
 coverImage: '/assets/blog/Ubuntu/Ubuntu.png'
-date: '2022-11-02T23:00'
+date: '2022-11-02T23:00:00'
 ogImage:
   url: '/assets/blog/Ubuntu/Ubuntu.png'
 tags:

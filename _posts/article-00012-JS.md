@@ -2,7 +2,7 @@
 title: 'JavaScript基礎学習①'
 excerpt: 'フロントエンド言語を学習する際に必須なJavaScriptの基礎を習得していきます。'
 coverImage: '/assets/blog/JavaScript/ES2015.png'
-date: '2022-12-22T23:00'
+date: '2022-12-22T23:00:00'
 ogImage:
   url: '/assets/blog/JavaScript/ES2015.png'
 tags:

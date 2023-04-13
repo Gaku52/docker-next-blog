@@ -66,7 +66,7 @@ const generateMarkdown = async (articles) => {
     const hour = String(dateObject.getHours()).padStart(2, "0");
     const minute = String(dateObject.getMinutes()).padStart(2, "0");
 
-    const formattedDate = `${year}-${month}-${day}-${hour}-${minute}`;
+    const formattedDate = `${year}-${month}-${day}T${hour}:${minute}`;
 
     const frontMatter = {
       title: `${article.title}`,

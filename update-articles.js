@@ -6,7 +6,6 @@ const yaml = require("js-yaml");
 
 const MICRO_CMS_API_KEY = process.env.MICRO_CMS_API_KEY;
 const MICRO_CMS_API_BASE_URL = process.env.MICRO_CMS_API_BASE_URL;
-const MICRO_CMS_API_BASE_URL_CATEGORIES = process.env.MICRO_CMS_API_BASE_URL_CATEGORIES;
 
 const downloadImage = async (url, outputPath) => {
   const response = await axios({
@@ -40,23 +39,12 @@ const fetchData = async () => {
 
     console.log("Data from API:", data);
 
-    const { data: categoryData } = await axios.get(`${MICRO_CMS_API_BASE_URL_CATEGORIES}`, {
-      headers: {
-        "X-API-KEY": MICRO_CMS_API_KEY,
-      },
-    });
-
-    const categories = categoryData.contents;
-
     const articles = data.contents.map(article => {
-      console.log("Tags data:", article.tags); // Add this line to display tags data in the console
+      console.log("Tags data:", article.tags);
       console.log("coverImage object:", article.coverImage);
       console.log("ogImage object:", article.ogImage);
 
-      const tags = article.tags ? article.tags.map(tag => {
-        const category = categories.find(category => category.id === tag);
-        return category.name;
-      }) : [];
+      const tags = article.tags || [];
 
       return { ...article, tags };
     });
@@ -66,6 +54,7 @@ const fetchData = async () => {
     console.error(error);
   }
 };
+
 
 const generateMarkdown = async (articles) => {
   for (const article of articles) {

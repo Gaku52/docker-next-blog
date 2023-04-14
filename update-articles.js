@@ -28,18 +28,6 @@ const downloadImage = async (url, outputPath) => {
   });
 };
 
-const deleteMarkdown = (id) => {
-  const fileName = `${id.toString().padStart(5, "0")}-`;
-  const files = fs.readdirSync(path.join(__dirname, "_posts"));
-
-  files.forEach((file) => {
-    if (file.startsWith(fileName)) {
-      fs.unlinkSync(path.join(__dirname, "_posts", file));
-      console.log(`Deleted file ${file}`);
-    }
-  });
-};
-
 const fetchData = async () => {
   try {
     const { data } = await axios.get(`${MICRO_CMS_API_BASE_URL}`, {
@@ -58,16 +46,6 @@ const fetchData = async () => {
       const tags = article.tags || [];
 
       return { ...article, tags };
-    });
-
-    // Delete Markdown files for deleted articles
-    const articleIds = articles.map(article => article.id);
-    const markdownFiles = fs.readdirSync(path.join(__dirname, "_posts"));
-    markdownFiles.forEach((file) => {
-      const id = parseInt(file.slice(0, 5));
-      if (!articleIds.includes(id)) {
-        deleteMarkdown(id);
-      }
     });
 
     return articles;

@@ -62,12 +62,12 @@ const getNextFileName = (dirPath) => {
 
 const htmlToMarkdown = (htmlContent) => {
   const headingReplacements = [
-    { regex: /<h1[^>]*>(.*?)<\/h1>/gi, replace: '# $1' },
-    { regex: /<h2[^>]*>(.*?)<\/h2>/gi, replace: '## $1' },
-    { regex: /<h3[^>]*>(.*?)<\/h3>/gi, replace: '### $1' },
-    { regex: /<h4[^>]*>(.*?)<\/h4>/gi, replace: '#### $1' },
-    { regex: /<h5[^>]*>(.*?)<\/h5>/gi, replace: '##### $1' },
-    { regex: /<h6[^>]*>(.*?)<\/h6>/gi, replace: '###### $1' },
+    { regex: /<h1[^>]*>(.*?)<\/h1>/gi, replace: '# $1\n' },
+    { regex: /<h2[^>]*>(.*?)<\/h2>/gi, replace: '## $1\n' },
+    { regex: /<h3[^>]*>(.*?)<\/h3>/gi, replace: '### $1\n' },
+    { regex: /<h4[^>]*>(.*?)<\/h4>/gi, replace: '#### $1\n' },
+    { regex: /<h5[^>]*>(.*?)<\/h5>/gi, replace: '##### $1\n' },
+    { regex: /<h6[^>]*>(.*?)<\/h6>/gi, replace: '###### $1\n' },
   ];
 
   let markdownContent = htmlContent;
@@ -78,6 +78,9 @@ const htmlToMarkdown = (htmlContent) => {
 
   // 改行タグを Markdown の改行に変換
   markdownContent = markdownContent.replace(/<br\s*\/?>/gi, '  \n');
+
+  // <p>タグを Markdown の段落に変換
+  markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, '$1\n\n');
 
   return markdownContent;
 };

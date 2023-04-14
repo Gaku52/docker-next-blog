@@ -60,6 +60,28 @@ const getNextFileName = (dirPath) => {
   return `${String(maxFileName + 1).padStart(5, '0')}`;
 };
 
+const htmlToMarkdown = (htmlContent) => {
+  const headingReplacements = [
+    { regex: /<h1[^>]*>(.*?)<\/h1>/gi, replace: '# $1' },
+    { regex: /<h2[^>]*>(.*?)<\/h2>/gi, replace: '## $1' },
+    { regex: /<h3[^>]*>(.*?)<\/h3>/gi, replace: '### $1' },
+    { regex: /<h4[^>]*>(.*?)<\/h4>/gi, replace: '#### $1' },
+    { regex: /<h5[^>]*>(.*?)<\/h5>/gi, replace: '##### $1' },
+    { regex: /<h6[^>]*>(.*?)<\/h6>/gi, replace: '###### $1' },
+  ];
+
+  let markdownContent = htmlContent;
+
+  headingReplacements.forEach((replacement) => {
+    markdownContent = markdownContent.replace(replacement.regex, replacement.replace);
+  });
+
+  // 改行タグを Markdown の改行に変換
+  markdownContent = markdownContent.replace(/<br\s*\/?>/gi, '  \n');
+
+  return markdownContent;
+};
+
 const generateMarkdown = async (articles) => {
   const postDirPath = path.join(__dirname, '_posts');
 
@@ -89,8 +111,10 @@ const generateMarkdown = async (articles) => {
       frontMatter.tags = article.tags.map(tag => `${tag}`);
     }
 
+    const markdownContentFromHtml = htmlToMarkdown(article.content);
+
     const frontMatterString = yaml.dump(frontMatter, { lineWidth: 1000, forceQuotes: true });
-    const markdownContent = `---\n${frontMatterString}---\n\n${article.content.replace(/<\/?p>/gi, " ")}\n`
+    const markdownContent = `---\n${frontMatterString}---\n\n${markdownContentFromHtml}\n`;
 
     fs.writeFileSync(filePath, markdownContent, "utf-8");
 

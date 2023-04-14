@@ -76,9 +76,9 @@ const htmlToMarkdown = (htmlContent) => {
     markdownContent = markdownContent.replace(replacement.regex, replacement.replace);
   });
 
-  // <p>タグ内の<br>タグを単一の改行に変換
+  // <p>タグ内の<br>タグを単一の改行に変換と文末にMarkdown用の2半角スペース追記
   markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, (match, p1) => {
-    p1 = p1.replace(/<br\s*\/?>/gi, '\n');
+    p1 = p1.replace(/<br\s*\/?>/gi, '\n'+'  ');
     return `${p1}\n\n`;
   });
 

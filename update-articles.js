@@ -79,16 +79,8 @@ const htmlToMarkdown = (htmlContent) => {
   // <p>タグ内の<br>タグを単一の改行に変換
   markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, (match, p1) => {
     p1 = p1.replace(/<br\s*\/?>/gi, '\n');
-    return `<p>${p1}</p>`;
+    return `${p1}\n\n`;
   });
-
-  // <p>タグを完全に削除
-markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, (match, p1) => {
-  // <p>タグ内のテキストの先頭と末尾にある空白と改行を削除
-  p1 = p1.replace(/^\s+|\s+$/g, '');
-
-  return p1;
-});
 
   // 連続した改行を削除
   markdownContent = markdownContent.replace(/\n{3,}/g, '\n\n');

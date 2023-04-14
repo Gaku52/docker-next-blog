@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const urlModule = require("url");
 const axios = require("axios");
 const yaml = require("js-yaml");
 
@@ -17,7 +16,7 @@ const downloadImage = async (url, outputPath) => {
     console.error(error);
   });
 
-  const parsedUrl = urlModule.parse(url);
+  const parsedUrl = new URL(url);
   const fileName = path.basename(parsedUrl.pathname);
   const writer = fs.createWriteStream(path.join(outputPath, fileName));
 
@@ -26,6 +25,18 @@ const downloadImage = async (url, outputPath) => {
   return new Promise((resolve, reject) => {
     writer.on("finish", resolve);
     writer.on("error", reject);
+  });
+};
+
+const deleteMarkdown = (id) => {
+  const fileName = `${id.toString().padStart(5, "0")}-`;
+  const files = fs.readdirSync(path.join(__dirname, "_posts"));
+
+  files.forEach((file) => {
+    if (file.startsWith(fileName)) {
+      fs.unlinkSync(path.join(__dirname, "_posts", file));
+      console.log(`Deleted file ${file}`);
+    }
   });
 };
 
@@ -47,6 +58,16 @@ const fetchData = async () => {
       const tags = article.tags || [];
 
       return { ...article, tags };
+    });
+
+    // Delete Markdown files for deleted articles
+    const articleIds = articles.map(article => article.id);
+    const markdownFiles = fs.readdirSync(path.join(__dirname, "_posts"));
+    markdownFiles.forEach((file) => {
+      const id = parseInt(file.slice(0, 5));
+      if (!articleIds.includes(id)) {
+        deleteMarkdown(id);
+      }
     });
 
     return articles;

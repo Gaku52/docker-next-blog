@@ -81,6 +81,8 @@ const htmlToMarkdown = (htmlContent) => {
 
   // <p>タグを Markdown の段落に変換し、空の<p>タグを除去
   markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, (match, p1) => {
+    // 改行タグを含む<p>タグを段落に変換
+    p1 = p1.replace(/<br\s*\/?>/gi, '\n');
     if (p1.trim() === '') {
       return '';
     } else {

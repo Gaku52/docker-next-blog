@@ -62,12 +62,8 @@ const getNextFileName = (dirPath) => {
 
 const htmlToMarkdown = (htmlContent) => {
   const headingReplacements = [
-    { regex: /<h1[^>]*>(.*?)<\/h1>/gi, replace: '# $1\n' },
     { regex: /<h2[^>]*>(.*?)<\/h2>/gi, replace: '## $1\n' },
     { regex: /<h3[^>]*>(.*?)<\/h3>/gi, replace: '### $1\n' },
-    { regex: /<h4[^>]*>(.*?)<\/h4>/gi, replace: '#### $1\n' },
-    { regex: /<h5[^>]*>(.*?)<\/h5>/gi, replace: '##### $1\n' },
-    { regex: /<h6[^>]*>(.*?)<\/h6>/gi, replace: '###### $1\n' },
   ];
 
   let markdownContent = htmlContent;
@@ -76,13 +72,17 @@ const htmlToMarkdown = (htmlContent) => {
     markdownContent = markdownContent.replace(replacement.regex, replacement.replace);
   });
 
+  // <p>タグ内の<br>タグを単一の改行に変換
+  markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, (match, p1) => {
+    p1 = p1.replace(/<br\s*\/?>/gi, '\n');
+    return `<p>${p1}</p>`;
+  });
+
   // 改行タグを Markdown の改行に変換
   markdownContent = markdownContent.replace(/<br\s*\/?>/gi, '  \n');
 
   // <p>タグを Markdown の段落に変換し、空の<p>タグを除去
   markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, (match, p1) => {
-    // 改行タグを含む<p>タグを段落に変換
-    p1 = p1.replace(/<br\s*\/?>/gi, '\n');
     if (p1.trim() === '') {
       return '';
     } else {

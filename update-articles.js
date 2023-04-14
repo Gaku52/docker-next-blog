@@ -66,8 +66,8 @@ const htmlToMarkdown = (htmlContent) => {
     { regex: /<h2[^>]*>(.*?)<\/h2>/gi, replace: '## $1\n' },
     { regex: /<h3[^>]*>(.*?)<\/h3>/gi, replace: '### $1\n' },
     { regex: /<h4[^>]*>(.*?)<\/h4>/gi, replace: '#### $1\n' },
-    { regex: /<h5[^>]*>(.*?)<\/h5>/gi, replace: '$1\n' },
-    { regex: /<h6[^>]*>(.*?)<\/h6>/gi, replace: '$1\n' },
+    { regex: /<h5[^>]*>(.*?)<\/h5>/gi, replace: '##### $1\n' },
+    { regex: /<h6[^>]*>(.*?)<\/h6>/gi, replace: '###### $1\n' },
   ];
 
   let markdownContent = htmlContent;
@@ -82,17 +82,13 @@ const htmlToMarkdown = (htmlContent) => {
     return `<p>${p1}</p>`;
   });
 
-  // <p>タグを Markdown の段落に変換し、空の<p>タグを除去
-  markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, (match, p1) => {
-    // <p>タグ内のテキストの先頭と末尾にある空白と改行を削除
-    p1 = p1.replace(/^\s+|\s+$/g, '');
+  // <p>タグを完全に削除
+markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, (match, p1) => {
+  // <p>タグ内のテキストの先頭と末尾にある空白と改行を削除
+  p1 = p1.replace(/^\s+|\s+$/g, '');
 
-    if (p1.trim() === '') {
-      return '';
-    } else {
-      return `${p1}\n\n`;
-    }
-  });
+  return p1;
+});
 
   // 連続した改行を削除
   markdownContent = markdownContent.replace(/\n{3,}/g, '\n\n');

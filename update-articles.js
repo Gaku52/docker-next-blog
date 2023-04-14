@@ -79,8 +79,17 @@ const htmlToMarkdown = (htmlContent) => {
   // 改行タグを Markdown の改行に変換
   markdownContent = markdownContent.replace(/<br\s*\/?>/gi, '  \n');
 
-  // <p>タグを Markdown の段落に変換
-  markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, '$1\n\n');
+  // <p>タグを Markdown の段落に変換し、空の<p>タグを除去
+  markdownContent = markdownContent.replace(/<p[^>]*>(.*?)<\/p>/gi, (match, p1) => {
+    if (p1.trim() === '') {
+      return '';
+    } else {
+      return `${p1}\n\n`;
+    }
+  });
+
+  // 連続した改行を削除
+  markdownContent = markdownContent.replace(/\n{3,}/g, '\n\n');
 
   return markdownContent;
 };
@@ -89,7 +98,9 @@ const generateMarkdown = async (articles) => {
   const postDirPath = path.join(__dirname, '_posts');
 
   for (const article of articles) {
-    const fileName = `${getNextFileName(postDirPath)}-${article.title.replace(/ /g, '-')}.md`;
+    // 既存のファイルを検索して、タイトルが一致するファイルがあるかどうかを確認する
+    const existingFile = fs.readdirSync(postDirPath).find((fileName) => fileName.endsWith(`${article.title.replace(/ /g, '-')}.md`));
+    const fileName = existingFile || `${getNextFileName(postDirPath)}-${article.title.replace(/ /g, '-')}.md`;
     const filePath = path.join(postDirPath, fileName);
 
     const dateObject = new Date(article.date);

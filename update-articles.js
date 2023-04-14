@@ -66,8 +66,8 @@ const htmlToMarkdown = (htmlContent) => {
     { regex: /<h2[^>]*>(.*?)<\/h2>/gi, replace: '## $1\n' },
     { regex: /<h3[^>]*>(.*?)<\/h3>/gi, replace: '### $1\n' },
     { regex: /<h4[^>]*>(.*?)<\/h4>/gi, replace: '#### $1\n' },
-    { regex: /<h5[^>]*>(.*?)<\/h5>/gi, replace: '##### $1\n' },
-    { regex: /<h6[^>]*>(.*?)<\/h6>/gi, replace: '###### $1\n' },
+    { regex: /<h5[^>]*>(.*?)<\/h5>/gi, replace: '$1\n' },
+    { regex: /<h6[^>]*>(.*?)<\/h6>/gi, replace: '$1\n' },
   ];
 
   let markdownContent = htmlContent;

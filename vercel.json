@@ -1,0 +1,8 @@
+{
+  "github": {
+    "ignoreBuildStep": "git diff --quiet HEAD^ HEAD -- :/.vercelignore"
+  },
+  "git": {
+    "ignoredBranches": ["gh-pages"]
+  }
+}

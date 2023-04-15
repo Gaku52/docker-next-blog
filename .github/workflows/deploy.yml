@@ -1,12 +1,14 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages #${{ github.run_number }}
 
 on:
   push:
   repository_dispatch:
     types: [update-articles]
+  workflow_dispatch:
 
 jobs:
   update-articles:
+    name: update-articles-${{ github.run_number }}
     runs-on: ubuntu-latest
 
     steps:

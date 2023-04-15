@@ -70,6 +70,7 @@ jobs:
 
   deploy-to-vercel:
     name: Deploy to Vercel
+    needs: update-articles
     runs-on: ubuntu-latest
 
     steps:

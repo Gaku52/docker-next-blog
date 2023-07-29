@@ -39,9 +39,9 @@ const fetchData = async () => {
     console.log("Data from API:", data);
 
     const articles = data.contents.map(article => {
-      console.log("Tags data:", article.tags);
-      console.log("coverImage object:", article.coverImage);
-      console.log("ogImage object:", article.ogImage);
+      // console.log("Tags data:", article.tags);
+      // console.log("coverImage object:", article.coverImage);
+      // console.log("ogImage object:", article.ogImage);
 
       const tags = article.tags || [];
 

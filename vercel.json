@@ -5,4 +5,25 @@
   "git": {
     "ignoredBranches": ["gh-pages"]
   }
+  "version": 2,
+  "builds": [
+    { "src": "update-articles.js", "use": "@vercel/node@18" }
+  ],
+  "routes": [
+    { "src": "/update-articles", "dest": "update-articles.js" }
+  ],
+  "env": {
+    "MICRO_CMS_API_KEY": "YOUR_MICRO_CMS_API_KEY",
+    "MICRO_CMS_API_BASE_URL": "YOUR_MICRO_CMS_API_BASE_URL"
+  },
+  "functions": {
+    "allowedFiles": ["update-articles.js"]
+  },
+  "public": {
+    "headers": {
+      "/update-articles": {
+        "Cache-Control": "no-store"
+      }
+    }
+  }
 }

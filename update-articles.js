@@ -1,15 +1,3 @@
-module.exports = async (req, res) => {
-  try {
-    const articles = await fetchData();
-    await generateMarkdown(articles);
-    console.log("Articles updated successfully");
-    res.status(200).json({ message: "Articles updated successfully" });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Something went wrong" });
-  }
-};
-
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");

@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages #$
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   update-articles:
-    name: update-articles-$
+    name: update-articles
     runs-on: ubuntu-latest
 
     steps:

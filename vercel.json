@@ -4,7 +4,7 @@
   },
   "git": {
     "ignoredBranches": ["gh-pages"]
-  }
+  },
   "version": 2,
   "builds": [
     { "src": "update-articles.js", "use": "@vercel/node@18" }

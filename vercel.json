@@ -16,9 +16,6 @@
     "MICRO_CMS_API_KEY": "YOUR_MICRO_CMS_API_KEY",
     "MICRO_CMS_API_BASE_URL": "YOUR_MICRO_CMS_API_BASE_URL"
   },
-  "functions": {
-    "allowedFiles": ["update-articles.js"]
-  },
   "public": {
     "headers": {
       "/update-articles": {

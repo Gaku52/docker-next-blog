@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages #$
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   update-articles:
-    name: update-articles
+    name: update-articles-$
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +20,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16.x'
+          node-version: '18.x'
 
       - name: Cache dependencies
         uses: actions/cache@v2
@@ -65,7 +65,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: $
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: out
 
   deploy-to-vercel:
@@ -81,4 +81,4 @@ jobs:
         run: npm i -g vercel
 
       - name: Deploy to Vercel
-        run: vercel --token $ --prod --confirm
+        run: npx vercel --token $VERCEL_TOKEN --prod --yes

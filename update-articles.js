@@ -30,11 +30,20 @@ const downloadImage = async (url, outputPath) => {
 
 const fetchData = async () => {
   try {
-    const { data } = await axios.get(`${MICRO_CMS_API_BASE_URL}`, {
+    const config = {
       headers: {
         "X-API-KEY": MICRO_CMS_API_KEY,
       },
-    });
+    };
+
+    const response = await axios.get(`${MICRO_CMS_API_BASE_URL}`, config);
+    const data = response.data;
+
+    // レスポンスヘッダからCache-Controlを取得し、次回のリクエストのヘッダに設定する
+    const cacheControl = response.headers["cache-control"];
+    if (cacheControl) {
+      config.headers["Cache-Control"] = cacheControl;
+    }
 
     console.log("Data from API:", data);
 
@@ -53,6 +62,7 @@ const fetchData = async () => {
     console.error(error);
   }
 };
+
 
 const getNextFileName = (dirPath) => {
   const fileNames = fs.readdirSync(dirPath).map(fileName => parseInt(fileName.slice(0, 5)));

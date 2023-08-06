@@ -10,7 +10,7 @@ on:
 
 jobs:
   update-articles:
-    name: update-articles-$
+    name: update-articles-${{ github.run_number }}
     runs-on: ubuntu-latest
 
     steps:

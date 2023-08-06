@@ -99,20 +99,14 @@ const generateMarkdown = async (articles) => {
 
     // 記事の日時情報をUTCとして取得する
     const dateObject = new Date(article.date);
-    const formattedDate = dateObject.toISOString(); // UTC形式の日時をそのまま保持します
-    // const year = dateObject.getUTCFullYear();
-    // const month = String(dateObject.getUTCMonth() + 1).padStart(2, "0");
-    // const day = String(dateObject.getUTCDate()).padStart(2, "0");
-    // const hour = String(dateObject.getUTCHours()).padStart(2, "0");
-    // const minute = String(dateObject.getUTCMinutes()).padStart(2, "0");
-    // const second = String(dateObject.getUTCSeconds()).padStart(2, "0");
-    // const formattedDate = `${year}-${month}-${day}T${hour}:${minute}:${second}`;
+    const jstDate = new Date(dateObject.getTime() + (9 * 60 * 60 * 1000)); // JSTに変換する（UTC+9時間）
+    const formattedDate = jstDate.toISOString().slice(0, 16).replace('T', ' '); // YYYY-MM-DDTHH:mm を YYYY-MM-DD HH:mm に変換
 
     const frontMatter = {
       title: `${article.title}`,
       excerpt: `${article.excerpt}`,
       coverImage: article.coverImage ? `/img/uploads/${path.basename(article.coverImage.url)}` : undefined,
-      date: article.date, // ここでUTC形式の日時をそのまま保持します
+      date: formattedDate,
       ogImage: article.ogImage ? { url: `/img/uploads/${path.basename(article.ogImage.url)}` } : undefined,
     };
 

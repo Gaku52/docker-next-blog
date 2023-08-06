@@ -97,13 +97,14 @@ const generateMarkdown = async (articles) => {
     const fileName = existingFile || `${getNextFileName(postDirPath)}-${article.title.replace(/ /g, '-')}.md`;
     const filePath = path.join(postDirPath, fileName);
 
+    // 記事の日時情報をUTCとして取得する
     const dateObject = new Date(article.date);
-    const year = dateObject.getFullYear();
-    const month = String(dateObject.getMonth() + 1).padStart(2, "0");
-    const day = String(dateObject.getDate()).padStart(2, "0");
-    const hour = String(dateObject.getHours()).padStart(2, "0");
-    const minute = String(dateObject.getMinutes()).padStart(2, "0");
-    const second = String(dateObject.getSeconds()).padStart(2, "0");
+    const year = dateObject.getUTCFullYear();
+    const month = String(dateObject.getUTCMonth() + 1).padStart(2, "0");
+    const day = String(dateObject.getUTCDate()).padStart(2, "0");
+    const hour = String(dateObject.getUTCHours()).padStart(2, "0");
+    const minute = String(dateObject.getUTCMinutes()).padStart(2, "0");
+    const second = String(dateObject.getUTCSeconds()).padStart(2, "0");
 
     const formattedDate = `${year}-${month}-${day}T${hour}:${minute}:${second}`;
 
